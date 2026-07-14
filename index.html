@@ -121,10 +121,9 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .consult-img img{position:relative;width:100%;max-width:260px;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:6px solid #fff;box-shadow:0 14px 30px rgba(214,51,108,.22)}
 .consult .en{margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--pink)}
 .consult h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:32px;line-height:1.4;margin:0 0 18px;color:var(--ink)}
-.consult p.consult-lead{font-size:15.5px;line-height:2;color:var(--sub);margin:0 auto 26px;max-width:460px;display:block}
-.consult-body{display:flex;flex-direction:column;align-items:flex-start}
-.consult-body .btn-x{align-self:center;margin-left:0}
-@media(min-width:861px){.consult-body .btn-x{margin-left:calc((460px - 100%) / 2)}}
+.consult p.consult-lead{font-size:15px;line-height:1.9;color:var(--sub);margin:0 0 26px;max-width:none;white-space:nowrap}
+.consult-body{display:flex;flex-direction:column;align-items:center;text-align:center}
+@media(max-width:900px){.consult p.consult-lead{white-space:normal}}
 .btn-x{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;font-weight:700;font-size:15px;padding:16px 28px;border-radius:999px}
 .btn-x b{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:17px}
 
@@ -147,13 +146,12 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .service-head h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:32px;margin:0 0 12px;color:var(--ink)}
 .service-head p{margin:0;font-size:14.5px;color:#8a7a80}
 .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.service-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 28px;min-height:170px}
-.svc-img{width:148px;height:111px;object-fit:cover;border-radius:12px;flex-shrink:0}
-.service-card{display:flex;gap:20px;align-items:center;cursor:pointer;font-family:inherit;text-align:left;transition:transform .15s,box-shadow .15s,border-color .15s}
+.service-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;min-height:180px}
+.svc-img{width:172px;height:129px;object-fit:cover;border-radius:12px;flex-shrink:0}
+.service-card{display:flex;gap:14px;align-items:center;cursor:pointer;font-family:inherit;text-align:left;transition:transform .15s,box-shadow .15s,border-color .15s}
 .service-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(214,51,108,.14);border-color:var(--pink)}
 .svc-body{display:flex;flex-direction:column;gap:6px}
 .svc-more{font-size:12.5px;font-weight:700;color:var(--pink)}
-.service-note{max-width:1120px;margin:20px auto 0;padding:0 32px;font-size:12.5px;color:#a08a92;text-align:center}
 .btn-consult{display:inline-flex;align-items:center;gap:10px;background:var(--pink);color:#fff;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;padding:20px 48px;border-radius:999px;box-shadow:0 10px 24px rgba(214,51,108,.3);transition:transform .15s}
 .btn-consult:hover{transform:translateY(-2px)}
 .service-card h3{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;margin:0 0 10px;color:var(--ink)}
@@ -162,16 +160,10 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 @media(max-width:860px){.service-grid{grid-template-columns:1fr}}
 
 /* anim */
-.anim{background:var(--tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.anim-in{max-width:1120px;margin:0 auto;padding:64px 32px}
-.anim-head{text-align:center;margin-bottom:32px}
-.anim-head .en{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--pink)}
-.anim-head h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:30px;margin:0 0 10px;color:var(--ink)}
-.anim-head p{margin:0;font-size:14px;color:#8a7a80}
-.anim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.anim-item{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;aspect-ratio:16/9}
-.anim-item video{width:100%;height:100%;object-fit:contain;display:block;background:#fff}
-@media(max-width:860px){.anim-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+.anim{background:#fff;overflow:hidden}
+.anim-strip{display:flex;width:100%}
+.anim-strip video{flex:1 1 0;min-width:0;height:clamp(150px,17vw,230px);object-fit:cover;display:block;background:#fff}
+@media(max-width:640px){.anim-strip video{height:110px}}
 
 /* modal */
 .modal-back{position:fixed;inset:0;background:rgba(35,20,28,.62);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:24px;z-index:200}
@@ -209,12 +201,12 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 
 /* company */
 .company{background:#1e1b1c}
-.company-in{max-width:1120px;margin:0 auto;padding:40px 32px;display:grid;grid-template-columns:1fr 1.6fr;gap:44px;align-items:center}
+.company-in{max-width:1120px;margin:0 auto;padding:30px 32px;display:grid;grid-template-columns:1fr 1.6fr;gap:44px;align-items:center}
 .company-logo{display:flex;justify-content:center;align-items:center;padding:10px}
 .company-logo img{max-width:130px;max-height:170px;width:auto;height:auto;object-fit:contain}
-.company .en{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--pink)}
-.company h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:21px;margin:0 0 14px;color:#fff}
-.company dl{display:grid;grid-template-columns:100px 1fr;row-gap:8px;column-gap:20px;margin:0;font-size:13.5px}
+.company .en{margin:0 0 5px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--pink)}
+.company h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:20px;margin:0 0 10px;color:#fff}
+.company dl{display:grid;grid-template-columns:100px 1fr;row-gap:5px;column-gap:20px;margin:0;font-size:13px;line-height:1.5}
 .company dt{color:#a99ba1;font-weight:700}
 .company dd{margin:0;color:#fff;font-weight:500}
 .company dd a{color:var(--pink);font-weight:700}
@@ -250,7 +242,6 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
       <a href="#articles">BLOG</a>
       <a href="#studio">ATELIER</a>
       <a href="#world">PATTI's WORLD</a>
-      <a href="#anim">ANIMATION</a>
       <a href="#service">SERVICE</a>
       <a class="pill" href="#consult">相談する</a>
     </nav>
@@ -358,23 +349,10 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 </section>
 
 <section class="anim" id="anim">
-  <div class="anim-in">
-    <div class="anim-head">
-      <p class="en">ANIMATION</p>
-      <h2>パッチ、動きます。</h2>
-      <p>3DCG・Live2D・手づくりのコマ撮り。動かし方は、いろいろあります。</p>
-    </div>
-    <div class="anim-grid">
-      <div class="anim-item">
-        <video data-src="assets/anim1.mp4" poster="assets/anim1_poster.jpg" muted loop playsinline preload="none" aria-label="STUDIO PATTI アニメーション"></video>
-      </div>
-      <div class="anim-item">
-        <video data-src="assets/anim2.mp4" poster="assets/anim2_poster.jpg" muted loop playsinline preload="none" aria-label="G-Patti the Spook"></video>
-      </div>
-      <div class="anim-item">
-        <video data-src="assets/anim3.mp4" poster="assets/anim3_poster.jpg" muted loop playsinline preload="none" aria-label="Patti the Spook コマ撮り"></video>
-      </div>
-    </div>
+  <div class="anim-strip">
+    <video data-src="assets/anim1.mp4" poster="assets/anim1_poster.jpg" muted loop playsinline preload="none" aria-label=""></video>
+    <video data-src="assets/anim2.mp4" poster="assets/anim2_poster.jpg" muted loop playsinline preload="none" aria-label=""></video>
+    <video data-src="assets/anim3.mp4" poster="assets/anim3_poster.jpg" muted loop playsinline preload="none" aria-label=""></video>
   </div>
 </section>
 
@@ -414,7 +392,6 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
       </div>
     </button>
   </div>
-  <p class="service-note">※ バリエーション制作には「自社作品のみを学習した独自AI（クリーンAI）」を使用。他者の著作権を侵害しない、透明な制作体制です。</p>
   <div class="service-cta"><a class="btn-consult" href="#consult">まずは気軽に相談する</a></div>
 </section>
 
