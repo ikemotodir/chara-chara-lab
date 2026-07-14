@@ -53,6 +53,7 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .stat{text-align:center;border-right:1px solid rgba(255,255,255,.12);padding:6px 0}
 .stat:last-child{border-right:none}
 .stat b{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(26px,3.2vw,42px);line-height:1;color:var(--yellow);display:block;white-space:nowrap}
+.stat b i{font-style:normal;font-size:.5em;margin-left:2px}
 .stat span{font-size:13px;margin-top:10px;color:rgba(255,255,255,.72);font-weight:500;display:block}
 
 /* articles */
@@ -103,7 +104,7 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 
 /* program band */
 .program{background:var(--yellow);color:var(--ink);margin-top:56px}
-.program-in{max-width:1120px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.program-in{max-width:1120px;margin:0 auto;padding:48px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .program-left{display:flex;align-items:center;gap:18px}
 .soon{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;letter-spacing:.1em;background:var(--ink);color:var(--yellow);padding:6px 12px;border-radius:6px;flex-shrink:0}
 .program h2{margin:0;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px}
@@ -136,33 +137,47 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .service-head p{margin:0;font-size:14.5px;color:#8a7a80}
 .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .service-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 30px}
-.service-card .icon{font-size:34px;margin-bottom:10px;display:block}
+.svc-img{width:112px;height:112px;object-fit:cover;border-radius:14px;flex-shrink:0}
+.service-card{display:flex;gap:18px;align-items:flex-start}
+.service-note{max-width:1120px;margin:20px auto 0;padding:0 32px;font-size:12.5px;color:#a08a92;text-align:center}
+.btn-consult{display:inline-flex;align-items:center;gap:10px;background:var(--pink);color:#fff;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;padding:20px 48px;border-radius:999px;box-shadow:0 10px 24px rgba(214,51,108,.3);transition:transform .15s}
+.btn-consult:hover{transform:translateY(-2px)}
 .service-card h3{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;margin:0 0 10px;color:var(--ink)}
 .service-card p{margin:0;font-size:14px;line-height:1.95;color:var(--sub)}
 .service-cta{text-align:center;margin-top:32px}
 @media(max-width:860px){.service-grid{grid-template-columns:1fr}}
 
+/* world */
+.world{background:#fff}
+.world-in{max-width:1120px;margin:0 auto;padding:80px 32px}
+.world-head{text-align:center;margin-bottom:40px}
+.world-head .en{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--pink)}
+.world-head h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:32px;margin:0;color:var(--ink)}
+.world-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.world-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.world-card:hover{transform:translateY(-4px);box-shadow:0 16px 30px rgba(214,51,108,.12)}
+.world-card figure{margin:0;height:240px;overflow:hidden}
+.world-card img{width:100%;height:100%;object-fit:cover;display:block}
+.world-body{padding:20px 24px 24px}
+.w-tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--log-bg);color:var(--pink);border:1px solid var(--log-border);margin-bottom:10px}
+.world-body h3{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;margin:0 0 8px;color:var(--ink)}
+.world-body p{margin:0;font-size:14px;color:var(--sub);line-height:1.8}
+@media(max-width:860px){.world-grid{grid-template-columns:1fr}.world-card figure{height:200px}}
+
 /* company */
-.company{background:#fff;border-top:1px solid var(--line)}
+.company{background:#1e1b1c}
 .company-in{max-width:1120px;margin:0 auto;padding:64px 32px;display:grid;grid-template-columns:1fr 1.6fr;gap:44px;align-items:center}
 .company-logo{display:flex;justify-content:center;align-items:center;padding:10px}
-.company-logo img{max-width:200px;max-height:260px;width:auto;height:auto;object-fit:contain}
+.company-logo img{max-width:130px;max-height:170px;width:auto;height:auto;object-fit:contain}
 .company .en{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--pink)}
-.company h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:24px;margin:0 0 20px;color:var(--ink)}
+.company h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:24px;margin:0 0 20px;color:#fff}
 .company dl{display:grid;grid-template-columns:110px 1fr;row-gap:12px;column-gap:20px;margin:0;font-size:14px}
-.company dt{color:#8a7a80;font-weight:700}
-.company dd{margin:0;color:var(--ink);font-weight:500}
+.company dt{color:#a99ba1;font-weight:700}
+.company dd{margin:0;color:#fff;font-weight:500}
 .company dd a{color:var(--pink);font-weight:700}
-@media(max-width:860px){.company-in{grid-template-columns:1fr;gap:24px}.company-logo img{max-height:180px}}
+@media(max-width:860px){.company-in{grid-template-columns:1fr;gap:24px}.company-logo img{max-height:130px}}
 
 /* footer */
-footer{background:#fff;color:#8a8a8a}
-.foot-in{max-width:1120px;margin:0 auto;padding:56px 32px 40px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.foot-in .f-logo{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:20px;color:var(--pink);margin:0 0 6px}
-.foot-in p{margin:0;font-size:13px;letter-spacing:.06em}
-.foot-links{display:flex;gap:40px;flex-wrap:wrap}
-.foot-links div{display:flex;flex-direction:column;gap:10px}
-.foot-links a{font-size:13.5px}
 .copyright{background:var(--pink)}
 .copyright div{max-width:1120px;margin:0 auto;padding:20px 32px;font-size:12px;color:#fff;letter-spacing:.04em}
 
@@ -188,10 +203,11 @@ footer{background:#fff;color:#8a8a8a}
   <div class="head-in">
     <a class="logo" href="#top"><b>CHARA CHARA LAB</b><small>by STUDIO PATTI</small></a>
     <nav>
+      <a href="#about">ABOUT</a>
       <a href="#articles">記事</a>
-      <a href="#service">サービス</a>
       <a href="#studio">アトリエ</a>
-      <a href="#program">プログラム</a>
+      <a href="#world">パッチの世界</a>
+      <a href="#service">CHARA CHARA</a>
       <a class="pill" href="#consult">相談する</a>
     </nav>
   </div>
@@ -200,8 +216,8 @@ footer{background:#fff;color:#8a8a8a}
 <section class="hero" id="top">
   <div class="hero-in">
     <div class="hero-copy">
-      <h1>キャラクターの<br>実験室</h1>
-      <p class="hero-sub"><i></i>描いて、試して、記録する。IPビジネス研究ノート。</p>
+      <h1>CHARA CHARA<br>LAB</h1>
+      <p class="hero-sub"><i></i>キャラクターの実験室</p>
       <div class="btns">
         <a class="btn-y" href="#articles">記事を読む <span>→</span></a>
         <a class="btn-o" href="#consult">デザイン相談</a>
@@ -213,17 +229,17 @@ footer{background:#fff;color:#8a8a8a}
 
 <section class="stats">
   <div class="stats-in">
-    <div class="stat"><b>60+</b><span>生み出したキャラクター</span></div>
-    <div class="stat"><b>3,000,000</b><span>キャラクターNFTの売上（円）</span></div>
-    <div class="stat"><b>+500</b><span>絵本を届けた人の数</span></div>
-    <div class="stat"><b>+116</b><span>キャラクター関連クラファン支援者</span></div>
+    <div class="stat"><b>60<i>体</i></b><span>生み出したキャラクター</span></div>
+    <div class="stat"><b>3,000,000<i>円</i></b><span>キャラクターNFTの売上</span></div>
+    <div class="stat"><b>+550<i>人</i></b><span>絵本を届けた人の数</span></div>
+    <div class="stat"><b>116<i>人</i></b><span>キャラクター関連クラファン支援者</span></div>
   </div>
 </section>
 
 <section class="about" id="about">
   <p class="en">ABOUT</p>
-  <h2>キャラクターの実験室とは</h2>
-  <p>CHARA CHARA LAB（キャラクターの実験室）は、合同会社スタジオパッチが運営する、キャラクターIPビジネスの研究ノートです。自社キャラクター「おばけのパッチ」を実験台に、キャラクターの設計・契約・育て方を実際に試して、その過程と結果をそのまま記録しています。これからキャラクターを持ちたい人、眠っているマスコットをお持ちの企業・自治体の方の、参考になれば嬉しいです。</p>
+  <h2>CHARA CHARA LABとは</h2>
+  <p>「CHARA CHARA LAB」は、キャラクターの世界観創りや、IPビジネスの研究所です。自社キャラクター「おばけのパッチ」を実験台に、キャラクターの設計・育て方・ライセンス契約・AI活用を実際に試し、そのプロセスと結果を記録しています。<br>「これからキャラクターを持ちたい！」「キャラクター作ったけど何にも使ってない…」<br>そんな企業・自治体、クリエイターのご参考になれば嬉しいです。</p>
 </section>
 
 <main class="articles" id="articles">
@@ -253,7 +269,7 @@ footer{background:#fff;color:#8a8a8a}
 <section class="atelier" id="studio">
   <div class="atelier-in">
     <div class="atelier-head">
-      <p class="en">BEHIND THE LAB</p>
+      <p class="en">ATELIER</p>
       <h2>つくっているのは、こんな場所</h2>
       <p>日々の制作風景を、そのまま。</p>
     </div>
@@ -266,35 +282,71 @@ footer{background:#fff;color:#8a8a8a}
   </div>
 </section>
 
+<section class="world" id="world">
+  <div class="world-in">
+    <div class="world-head">
+      <p class="en">PATTI'S WORLD</p>
+      <h2>おばけのパッチの世界</h2>
+    </div>
+    <div class="world-grid">
+      <a class="world-card" href="https://studiopatti.base.shop/blog/2025/02/19/100851" target="_blank" rel="noopener">
+        <figure><img src="assets/world_ehon.jpg" alt="絵本「おばけのパッチ」" loading="lazy"></figure>
+        <div class="world-body">
+          <span class="w-tag">絵本</span>
+          <h3>絵本「おばけのパッチ」</h3>
+          <p>すべての始まりの一冊。娘に贈るために生まれた物語です。→</p>
+        </div>
+      </a>
+      <a class="world-card" href="https://youtu.be/lcd2cR3ceaI" target="_blank" rel="noopener">
+        <figure><img src="assets/world_metaverse.jpg" alt="メタバース「おばけの街」" loading="lazy"></figure>
+        <div class="world-body">
+          <span class="w-tag">メタバース</span>
+          <h3>メタバース「おばけの街」</h3>
+          <p>パッチの世界を歩ける、ボクセルの街。映像でどうぞ。→</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="service" id="service">
   <div class="service-head">
     <p class="en">SERVICE</p>
-    <h2>CHARA CHARAでできること</h2>
-    <p>キャラクターを「描いて終わり」にしない。設計から育成まで。</p>
+    <h2>CHARA CHARA</h2>
+    <p>キャラクターを「描いて終わり」にせず<br>目的に合った設計・デザイン・育成を行うサービス。</p>
   </div>
   <div class="service-grid">
     <div class="service-card">
-      <span class="icon">🎨</span>
-      <h3>キャラクター設計・デザイン</h3>
-      <p>見た目だけでなく、人格・世界観・口調まで。1枚の「設定書」つきで設計するので、担当者が代わってもキャラがブレません。著作権や契約まわりも明朗に進めます。</p>
+      <img class="svc-img" src="assets/svc_design.jpg" alt="キャラクター設計・デザイン" loading="lazy">
+      <div>
+        <h3>キャラクター設計・デザイン</h3>
+        <p>見た目だけでなく、人格・世界観・口調まで。1枚の「設定書」つきで設計するので、担当者が代わってもキャラがブレません。著作権や契約まわりも明朗に進めます。</p>
+      </div>
     </div>
     <div class="service-card">
-      <span class="icon">👻</span>
-      <h3>眠れるマスコットの再生</h3>
-      <p>使われなくなったキャラクターに、設定と運用を足してもう一度動かします。すでに顔を知られている分、新しく作るより速く、コストもずっと抑えられます。</p>
+      <img class="svc-img" src="assets/svc_anime.jpg" alt="アニメーション制作" loading="lazy">
+      <div>
+        <h3>アニメーション制作</h3>
+        <p>キャラクターに、動きと呼吸を。Live2D・3DCG・手づくり素材のコマ撮りまで、信頼できる協力スタジオと連携し、用途と予算に合った「最適な動かし方」をご提案します。</p>
+      </div>
     </div>
     <div class="service-card">
-      <span class="icon">🤝</span>
-      <h3>IPライセンス・育成の伴走</h3>
-      <p>制作して終わりにしません。グッズ展開やSNS発信の設計まで、キャラクターが長く愛されて収益を生むところまで、長期のパートナーとして伴走します。</p>
+      <img class="svc-img" src="assets/svc_license.jpg" alt="IP育成・ライセンス契約の伴走" loading="lazy">
+      <div>
+        <h3>IP育成・ライセンス契約の伴走</h3>
+        <p>創って終わりにしません。SNS発信・グッズ展開・ライセンス契約の設計まで、キャラクターが愛されて収益を生むところまで伴走します。契約書のご相談だけでも歓迎です。</p>
+      </div>
     </div>
     <div class="service-card">
-      <span class="icon">🧪</span>
-      <h3>クリーンAIの制作体制</h3>
-      <p>バリエーション制作には「自社作品のみを学習した独自AI」を使います。他者の著作権を侵害しない、透明な制作体制です。仕組みはこのブログで公開しています。</p>
+      <img class="svc-img" src="assets/svc_saisei.jpg" alt="キャラクター再生" loading="lazy">
+      <div>
+        <h3>キャラクター再生</h3>
+        <p>活用に悩んでいるキャラクターに、世界観と物語を設計してもう一度生きたキャラクターにします。</p>
+      </div>
     </div>
   </div>
-  <div class="service-cta"><a class="btn-x" href="#consult">まずは気軽に相談する</a></div>
+  <p class="service-note">※ バリエーション制作には「自社作品のみを学習した独自AI（クリーンAI）」を使用。他者の著作権を侵害しない、透明な制作体制です。</p>
+  <div class="service-cta"><a class="btn-consult" href="#consult">まずは気軽に相談する</a></div>
 </section>
 
 <section class="program" id="program">
@@ -303,7 +355,7 @@ footer{background:#fff;color:#8a8a8a}
       <span class="soon">COMING SOON</span>
       <div>
         <h2>パッチクリエイターズプログラム、準備中。</h2>
-        <p>キャラクターを一緒に育てるクリエイターを募集します。詳細は近日公開。</p>
+        <p>おばけのパッチを一緒に育てるクリエイターを募集します。詳細は近日公開。</p>
       </div>
     </div>
     <a class="program-link" href="https://x.com/ikemotodir" target="_blank" rel="noopener">最新情報を受け取る →</a>
@@ -324,7 +376,7 @@ footer{background:#fff;color:#8a8a8a}
 
 <section class="company">
   <div class="company-in">
-    <div class="company-logo"><img src="assets/logo_black.png" alt="STUDIO PATTI" loading="lazy"></div>
+    <div class="company-logo"><img src="assets/logo_white.png" alt="STUDIO PATTI" loading="lazy"></div>
     <div>
       <p class="en">COMPANY</p>
       <h2>運営会社概要</h2>
@@ -342,22 +394,6 @@ footer{background:#fff;color:#8a8a8a}
 </section>
 
 <footer>
-  <div class="foot-in">
-    <div>
-      <p class="f-logo">CHARA CHARA LAB</p>
-      <p>キャラクターの実験室 ／ STUDIO PATTI</p>
-    </div>
-    <div class="foot-links">
-      <div>
-        <a href="#articles">記事一覧</a>
-        <a href="#program">プログラム</a>
-      </div>
-      <div>
-        <a href="#consult">相談する</a>
-        <a href="https://x.com/ikemotodir" target="_blank" rel="noopener">X（@ikemotodir）</a>
-      </div>
-    </div>
-  </div>
   <div class="copyright"><div>© 2026 STUDIO PATTI. All rights reserved.</div></div>
 </footer>
 
