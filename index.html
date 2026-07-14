@@ -38,9 +38,9 @@ nav .pill{font-size:13px;font-weight:700;color:#fff;background:var(--pink);paddi
 .hero-in{position:relative;max-width:1120px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:600px;gap:16px}
 .hero-copy{padding:80px 0}
 h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px,6vw,70px);line-height:1.15;margin:0 0 26px;letter-spacing:.01em}
-.hero-copy p.hero-sub{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:10px 20px;border-radius:999px;font-size:14.5px;font-weight:700;letter-spacing:.04em;margin:0 0 38px;color:#fff;line-height:1.6}
-.hero-copy p.hero-sub i{width:7px;height:7px;border-radius:50%;background:var(--yellow);display:inline-block;flex-shrink:0}
-@media(max-width:640px){.hero-copy p.hero-sub{font-size:12.5px;padding:9px 16px}}
+.hero-copy p.hero-sub{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:7px 16px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:.06em;margin:0 0 18px;color:rgba(255,255,255,.95);line-height:1.5}
+.hero-copy p.hero-sub i{width:6px;height:6px;border-radius:50%;background:var(--yellow);display:inline-block;flex-shrink:0}
+@media(max-width:640px){.hero-copy p.hero-sub{font-size:11.5px;padding:6px 14px}}
 .btns{display:flex;gap:14px;flex-wrap:wrap}
 .btn-y{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--ink);font-weight:700;font-size:15px;padding:15px 28px;border-radius:999px}
 .btn-o{display:inline-flex;align-items:center;background:transparent;color:#fff;font-weight:700;font-size:15px;padding:15px 26px;border-radius:999px;border:1.5px solid rgba(255,255,255,.6)}
@@ -159,6 +159,27 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .service-cta{text-align:center;margin-top:32px}
 @media(max-width:860px){.service-grid{grid-template-columns:1fr}}
 
+/* motion */
+@media(hover:hover) and (pointer:fine){
+  body{cursor:url("assets/cursor_patti.png") 6 4, auto}
+  a,button,.service-card,.about-btn,.card a,.world-card{cursor:pointer}
+}
+@keyframes float-patti{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-14px) rotate(1.2deg)}}
+.hero-img img{animation:float-patti 4.5s ease-in-out infinite}
+.reveal{opacity:0;transform:translateY(24px)}
+.reveal.in{animation:reveal-up .72s cubic-bezier(.2,1.35,.35,1) forwards}
+@keyframes reveal-up{to{opacity:1;transform:none}}
+.btn-y,.btn-o,.btn-x,.btn-consult,.pill,.modal-cta,.about-btn,.more-link a{transition:transform .2s cubic-bezier(.2,1.9,.4,1),box-shadow .2s,background .15s,border-color .15s}
+.btn-y:hover,.btn-o:hover,.btn-x:hover,.btn-consult:hover,.pill:hover,.modal-cta:hover,.more-link a:hover{transform:scale(1.06) rotate(-1deg)}
+.btn-y:active,.btn-o:active,.btn-x:active,.btn-consult:active,.pill:active,.modal-cta:active{transform:scale(.95)}
+.about-btn:hover{transform:translateY(-3px) scale(1.03) rotate(-.8deg)}
+.card a:hover,.world-card:hover,.service-card:hover{transform:translateY(-5px) rotate(-.5deg)}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  body{cursor:auto}
+}
+
 /* anim */
 .anim{background:#fff;overflow:hidden}
 .anim-strip{display:flex;width:100%}
@@ -251,8 +272,8 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 <section class="hero" id="top">
   <div class="hero-in">
     <div class="hero-copy">
-      <h1>CHARA CHARA<br>LAB</h1>
       <p class="hero-sub"><i></i>キャラクターの実験室</p>
+      <h1>CHARA CHARA<br>LAB</h1>
       <div class="btns">
         <a class="btn-y" href="#articles">記事を読む <span>→</span></a>
         <a class="btn-o" href="#consult">デザイン相談</a>
@@ -264,10 +285,10 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 
 <section class="stats">
   <div class="stats-in">
-    <div class="stat"><b>60<i>体</i></b><span>生み出したキャラクター</span></div>
-    <div class="stat"><b>3,000,000<i>円</i></b><span>キャラクターNFTの売上</span></div>
-    <div class="stat"><b>+550<i>人</i></b><span>絵本を届けた人の数</span></div>
-    <div class="stat"><b>116<i>人</i></b><span>キャラクター関連クラファン支援者</span></div>
+    <div class="stat"><b data-count="60" data-unit="体" data-prefix="">60<i>体</i></b><span>生み出したキャラクター</span></div>
+    <div class="stat"><b data-count="3000000" data-unit="円" data-prefix="">3,000,000<i>円</i></b><span>キャラクターNFTの売上</span></div>
+    <div class="stat"><b data-count="550" data-unit="人" data-prefix="+">+550<i>人</i></b><span>絵本を届けた人の数</span></div>
+    <div class="stat"><b data-count="116" data-unit="人" data-prefix="">116<i>人</i></b><span>キャラクター関連クラファン支援者</span></div>
   </div>
 </section>
 
@@ -417,7 +438,7 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
     </div>
     <div class="consult-body">
       <p class="en">LET'S TALK</p>
-      <h2>キャラクターのこと、<br>気軽に相談しませんか。</h2>
+      <h2>キャラクターのこと<br>気軽に相談しませんか。</h2>
       <p class="consult-lead">設計・デザイン・育て方。どんな段階でも、X の DM からどうぞ。</p>
       <a class="btn-x" href="https://x.com/ikemotodir" target="_blank" rel="noopener"><b>𝕏</b>@ikemotodir に DM する</a>
     </div>
@@ -560,6 +581,51 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
       });
     }, { rootMargin: "150px" });
     vids.forEach(function(v){ io.observe(v); });
+  }
+
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // 数字のカウントアップ
+  var stats = document.querySelectorAll("[data-count]");
+  function runCount(el){
+    var target = parseInt(el.dataset.count, 10);
+    var unit = el.dataset.unit || "";
+    var prefix = el.dataset.prefix || "";
+    var t0 = null;
+    function step(now){
+      if(!t0) t0 = now;
+      var p = Math.min((now - t0) / 1500, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      var v = Math.round(target * e);
+      el.innerHTML = prefix + v.toLocaleString("ja-JP") + "<i>" + unit + "</i>";
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if(!reduce && "IntersectionObserver" in window){
+    var so = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){ runCount(e.target); so.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    stats.forEach(function(s){ so.observe(s); });
+  }
+
+  // スクロールでふわっと出現
+  if(!reduce && "IntersectionObserver" in window){
+    var targets = document.querySelectorAll(".card, .world-card, .service-card, .atelier-grid figure, .about-btn, .company-in > div, .consult-in > div");
+    targets.forEach(function(t){ t.classList.add("reveal"); });
+    var ro = new IntersectionObserver(function(es){
+      es.forEach(function(e, i){
+        if(e.isIntersecting){
+          var el = e.target;
+          var d = (Array.prototype.indexOf.call(el.parentNode.children, el) % 4) * 90;
+          setTimeout(function(){ el.classList.add("in"); }, d);
+          ro.unobserve(el);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+    targets.forEach(function(t){ ro.observe(t); });
   }
 })();
 </script>
