@@ -140,19 +140,20 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .ab-arrow{font-size:18px;color:var(--pink);font-weight:700}
 
 /* services */
-.service{max-width:1120px;margin:0 auto;padding:96px 32px 24px}
+.service{background:linear-gradient(180deg,#FCE9F1 0%,#F7D3E2 100%);padding:96px 0 44px}
+.service-in{max-width:1120px;margin:0 auto;padding:0 32px}
 .service-head{text-align:center;margin-bottom:48px}
 .service-head .en{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--pink)}
 .service-head h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:32px;margin:0 0 12px;color:var(--ink)}
 .service-head p{margin:0;font-size:14.5px;color:#8a7a80}
 .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.service-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;min-height:180px}
+.service-card{background:#fff;border:2px solid var(--line);border-radius:18px;padding:22px 24px;min-height:180px}
 .svc-img{width:172px;height:129px;object-fit:cover;border-radius:12px;flex-shrink:0}
 .service-card{display:flex;gap:14px;align-items:center;cursor:pointer;font-family:inherit;text-align:left;transition:transform .15s,box-shadow .15s,border-color .15s}
-.service-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(214,51,108,.14);border-color:var(--pink)}
+.service-card:hover{transform:translateY(-3px);border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,212,59,.6),0 16px 30px rgba(214,51,108,.28)}
 .svc-body{display:flex;flex-direction:column;gap:6px}
 .svc-more{font-size:12.5px;font-weight:700;color:var(--pink)}
-.btn-consult{display:inline-flex;align-items:center;gap:10px;background:var(--pink);color:#fff;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;padding:20px 48px;border-radius:999px;box-shadow:0 10px 24px rgba(214,51,108,.3);transition:transform .15s}
+.btn-consult{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--pink);border:2px solid var(--pink);font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;padding:18px 46px;border-radius:999px;box-shadow:0 10px 24px rgba(214,51,108,.22);transition:transform .15s}
 .btn-consult:hover{transform:translateY(-2px)}
 .service-card h3{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;margin:0 0 10px;color:var(--ink)}
 .service-card p{margin:0;font-size:14px;line-height:1.95;color:var(--sub)}
@@ -201,6 +202,20 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .modal-body p{font-size:14.5px;line-height:1.9;color:var(--sub);margin:0 0 14px}
 .modal-body p:last-child{margin-bottom:0}
 .modal-cta{display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:#fff;font-weight:700;font-size:14.5px;padding:12px 24px;border-radius:999px;margin-top:4px}
+/* service detail (modal) */
+.modal.wide{max-width:720px}
+.svc-lead{font-size:14.5px;line-height:1.95;color:var(--sub);margin:0 0 20px}
+.svc-subhead{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px;color:var(--ink);margin:6px 0 12px;padding-left:12px;border-left:5px solid var(--yellow)}
+.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 22px}
+.tech-card{background:var(--tint);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.tech-card .tech-ico{font-size:22px;line-height:1}
+.tech-card b{display:block;font-family:'Zen Maru Gothic',sans-serif;font-size:15px;color:var(--pink);margin:6px 0 4px}
+.tech-card p{font-size:12.5px;line-height:1.75;color:var(--sub);margin:0}
+.svc-reel{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:0 0 10px}
+.svc-reel video{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:var(--tint);display:block}
+.svc-slot{border:2px dashed #e6a9c3;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;font-weight:700;color:var(--pink);background:#fff5f9;aspect-ratio:4/3;padding:8px}
+.svc-reelnote{font-size:12px;color:var(--muted);margin:0 0 18px}
+@media(max-width:640px){.tech-grid{grid-template-columns:1fr}.svc-reel{grid-template-columns:1fr 1fr}}
 @media(max-width:640px){.modal-body{padding:18px 20px 22px}.modal-body h3{font-size:19px}.modal-hero{max-height:30vh}.modal-patti{height:120px}}
 
 /* world */
@@ -378,6 +393,7 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 </section>
 
 <section class="service" id="service">
+  <div class="service-in">
   <div class="service-head">
     <p class="en">SERVICE</p>
     <h2>CHARA CHARA</h2>
@@ -399,9 +415,9 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
       </div>
     </button>
     <button class="service-card" data-modal="m-svc3">
-      <img class="svc-img" src="assets/svc_license.jpg" alt="IP育成・ライセンス契約の伴走" loading="lazy">
+      <img class="svc-img" src="assets/svc_license.jpg" alt="IP育成の伴走" loading="lazy">
       <div class="svc-body">
-        <h3>IP育成・ライセンス契約の伴走</h3>
+        <h3>IP育成の伴走</h3>
         <span class="svc-more">くわしく見る →</span>
       </div>
     </button>
@@ -414,6 +430,7 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
     </button>
   </div>
   <div class="service-cta"><a class="btn-consult" href="#consult">まずは気軽に相談する</a></div>
+  </div>
 </section>
 
 <section class="program" id="program">
@@ -496,13 +513,51 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 </div>
 
 <div class="modal-back" id="m-svc2">
-  <div class="modal">
+  <div class="modal wide">
     <button class="modal-close" aria-label="閉じる">×</button>
     <img class="modal-hero" src="assets/svc_anime.jpg" alt="アニメーション制作">
     <div class="modal-body">
       <p class="en">SERVICE 02</p>
       <h3>アニメーション制作</h3>
-      <p>キャラクターに、動きと呼吸を。Live2D・3DCG・手づくり素材のコマ撮りまで、信頼できる協力スタジオと連携し、用途と予算に合った「最適な動かし方」をご提案します。</p>
+      <p class="svc-lead">キャラクターに、動きと呼吸を。静止画のキャラクターを、SNS動画・CM・アプリ・イベント映像で"生きて動く"存在に変えます。用途と予算に合わせて、信頼できる協力スタジオと最適な表現を選びます。</p>
+
+      <p class="svc-subhead">制作できるコンテンツ</p>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <span class="tech-ico">🎭</span>
+          <b>Live2D</b>
+          <p>1枚のイラストを、生きているように動かす。VTuber・案内キャラ・SNSの縦動画に。</p>
+        </div>
+        <div class="tech-card">
+          <span class="tech-ico">🧊</span>
+          <b>3DCG</b>
+          <p>立体で作り込み、あらゆる角度から動かす。グッズ・アプリ・映像の主役に。</p>
+        </div>
+        <div class="tech-card">
+          <span class="tech-ico">✨</span>
+          <b>モーショングラフィックス</b>
+          <p>ロゴ・図形・文字を心地よく動かす。説明動画・オープニング・広告に。</p>
+        </div>
+        <div class="tech-card">
+          <span class="tech-ico">🎬</span>
+          <b>VFX（映像合成）</b>
+          <p>実写映像にキャラクターや効果を合成。イベント記録やPR映像をリッチに。</p>
+        </div>
+        <div class="tech-card">
+          <span class="tech-ico">🎞️</span>
+          <b>アナログ・コマ撮り</b>
+          <p>紙・粘土・人形などを1コマずつ撮影。手触りのある、温かい動きに。</p>
+        </div>
+      </div>
+
+      <p class="svc-subhead">制作実例</p>
+      <div class="svc-reel">
+        <video data-src="assets/anim1.mp4" poster="assets/anim1_poster.jpg" muted loop playsinline preload="none" aria-label="制作実例1"></video>
+        <video data-src="assets/anim2.mp4" poster="assets/anim2_poster.jpg" muted loop playsinline preload="none" aria-label="制作実例2"></video>
+        <video data-src="assets/anim3.mp4" poster="assets/anim3_poster.jpg" muted loop playsinline preload="none" aria-label="制作実例3"></video>
+      </div>
+      <p class="svc-reelnote">※ 協力スタジオの制作実績を、この欄に順次掲載していきます。実績掲載のご相談も歓迎です（DMへ）。</p>
+
       <a class="modal-cta" href="https://x.com/ikemotodir" target="_blank" rel="noopener">𝕏 DMで相談する</a>
     </div>
   </div>
