@@ -140,12 +140,13 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .ab-arrow{font-size:18px;color:var(--pink);font-weight:700}
 
 /* services */
-.service{background:linear-gradient(180deg,#FCE9F1 0%,#F7D3E2 100%);padding:96px 0 44px}
-.service-in{max-width:1120px;margin:0 auto;padding:0 32px}
+.service{position:relative;background:var(--pink);padding:96px 0 48px}
+.service::before{content:"";position:absolute;inset:0;opacity:.5;background-image:radial-gradient(circle,rgba(255,255,255,.14) 1.5px,transparent 1.5px);background-size:26px 26px}
+.service-in{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 32px}
 .service-head{text-align:center;margin-bottom:48px}
-.service-head .en{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--pink)}
-.service-head h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:32px;margin:0 0 12px;color:var(--ink)}
-.service-head p{margin:0;font-size:14.5px;color:#8a7a80}
+.service-head .en{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--yellow)}
+.service-head h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:32px;margin:0 0 12px;color:#fff}
+.service-head p{margin:0;font-size:14.5px;color:rgba(255,255,255,.92)}
 .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .service-card{background:#fff;border:2px solid var(--line);border-radius:18px;padding:22px 24px;min-height:180px}
 .svc-img{width:172px;height:129px;object-fit:cover;border-radius:12px;flex-shrink:0}
@@ -153,7 +154,7 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .service-card:hover{transform:translateY(-3px);border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,212,59,.6),0 16px 30px rgba(214,51,108,.28)}
 .svc-body{display:flex;flex-direction:column;gap:6px}
 .svc-more{font-size:12.5px;font-weight:700;color:var(--pink)}
-.btn-consult{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--pink);border:2px solid var(--pink);font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;padding:18px 46px;border-radius:999px;box-shadow:0 10px 24px rgba(214,51,108,.22);transition:transform .15s}
+.btn-consult{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--pink);border:none;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;padding:19px 48px;border-radius:999px;box-shadow:0 12px 28px rgba(120,10,50,.32);transition:transform .15s}
 .btn-consult:hover{transform:translateY(-2px)}
 .service-card h3{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:19px;margin:0 0 10px;color:var(--ink)}
 .service-card p{margin:0;font-size:14px;line-height:1.95;color:var(--sub)}
