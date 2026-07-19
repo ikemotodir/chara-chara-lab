@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自社キャラクター、身内で作ると危ない理由｜CHARA CHARA LAB</title>
+<meta property="og:title" content="自社キャラクター、身内で作ると危ない理由｜CHARA CHARA LAB">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://ikemotodir.github.io/chara-chara-lab/assets/thumb_log.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#D6336C;--yellow:#FFD43B;--ink:#2b2b2b;--sub:#3a3238;--muted:#a89aa0;--line:#f0e6ea;
+--log-bg:#fbe3ec;--log-border:#f5cdda;--theory-bg:#fff7d6;--theory-ink:#8a6d00;--theory-border:#ffe8a0;--real-bg:#f2f0f1;--real-border:#e5e0e2}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--ink);background:#fdfbfc;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--yellow);color:var(--ink)}
+
+.site-head{position:sticky;top:0;z-index:50;background:rgba(253,251,252,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.head-in{max-width:1120px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:baseline;gap:12px}
+.logo b{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:22px;letter-spacing:.02em;color:var(--pink)}
+.logo small{font-size:11px;letter-spacing:.16em;color:#b9a9af;font-weight:500}
+nav{display:flex;align-items:center;gap:30px}
+nav a{font-size:14px;font-weight:500;color:#4a4a4a}
+nav .pill{font-size:13px;font-weight:700;color:#fff;background:var(--pink);padding:10px 20px;border-radius:999px}
+
+.art-head{max-width:720px;margin:0 auto;padding:60px 28px 0}
+.crumb{display:flex;align-items:center;gap:12px;margin-bottom:22px;font-size:13px;color:var(--muted)}
+.crumb a{color:var(--muted)}
+.crumb b{color:var(--pink);font-weight:700}
+.pillar{display:inline-block;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;border:1px solid;margin-bottom:18px}
+.pillar.log{background:var(--log-bg);color:var(--pink);border-color:var(--log-border)}
+.pillar.theory{background:var(--theory-bg);color:var(--theory-ink);border-color:var(--theory-border)}
+.pillar.real{background:var(--real-bg);color:var(--ink);border-color:var(--real-border)}
+.pillar.world{background:#fff;color:var(--pink);border-color:var(--log-border)}
+h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(26px,4.5vw,38px);line-height:1.5;margin:0 0 24px;color:var(--ink)}
+.author{display:flex;align-items:center;gap:14px;padding-bottom:30px;border-bottom:1px solid var(--line)}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--pink);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:15px;flex-shrink:0}
+.author p{margin:0;line-height:1.4}
+.author .name{font-size:14px;font-weight:700;color:var(--ink)}
+.author .meta{font-size:12.5px;color:var(--muted)}
+
+article{max-width:720px;margin:0 auto;padding:44px 28px 0;font-size:17px;line-height:2.15;color:var(--sub)}
+article p{margin:0 0 30px}
+article h2{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:21px;line-height:1.7;margin:52px 0 22px;padding:0;border:none;color:var(--ink)}
+article h2::before{content:"＝＝＝＝＝＝＝＝＝＝\A📕";white-space:pre;color:var(--pink);letter-spacing:.05em}
+article h2::after{content:"\A＝＝＝＝＝＝＝＝＝＝";white-space:pre;color:var(--pink);letter-spacing:.05em}
+article h3{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;margin:40px 0 16px;color:var(--ink)}
+article ul{margin:0 0 30px 1.4em}
+article li{margin-bottom:10px}
+article blockquote{margin:36px 0;padding:24px 28px;background:var(--theory-bg);border-radius:14px;border:1px solid var(--theory-border);font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:18px;line-height:1.9;color:var(--theory-ink)}
+article strong{background:linear-gradient(transparent 68%,var(--yellow) 68%)}
+article a{color:var(--pink)}
+
+.cta{max-width:720px;margin:64px auto 0;padding:0 28px}
+.cta-box{position:relative;background:var(--pink);color:#fff;border-radius:24px;overflow:hidden;padding:44px}
+.cta-box::before{content:"";position:absolute;inset:0;opacity:.5;background-image:radial-gradient(circle,rgba(255,255,255,.14) 1.5px,transparent 1.5px);background-size:24px 24px}
+.cta-in{position:relative;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.cta-in img{width:130px;height:auto;flex-shrink:0;filter:drop-shadow(0 10px 20px rgba(120,10,50,.3));border-radius:14px}
+.cta-body{flex:1;min-width:240px}
+.cta-body .en{margin:0 0 8px;font-size:12.5px;font-weight:700;letter-spacing:.12em;color:var(--yellow)}
+.cta-body h3{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:24px;line-height:1.5;margin:0 0 12px}
+.cta-body p{margin:0 0 22px;font-size:14.5px;line-height:1.9;color:rgba(255,255,255,.92)}
+.btn-y{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--ink);font-weight:700;font-size:15px;padding:14px 26px;border-radius:999px}
+.btn-y b{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px}
+
+.back{display:block;max-width:720px;margin:44px auto 0;padding:0 28px;font-size:13.5px}
+.back a{color:var(--pink);font-weight:700}
+
+footer{background:var(--pink);color:rgba(255,255,255,.85);margin-top:64px;border-top:1px solid var(--line)}
+.foot-in{max-width:1120px;margin:0 auto;padding:40px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot-in .f-logo{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:18px;color:#fff;margin:0}
+.foot-in p{margin:0;font-size:12px;color:rgba(255,255,255,.8)}
+</style>
+<!-- GA-AUTOPILOT-START -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V6CQHN8FTE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V6CQHN8FTE');</script>
+<!-- GA-AUTOPILOT-END -->
+</head>
+<body>
+
+<header class="site-head">
+  <div class="head-in">
+    <a class="logo" href="../index.html"><b>CHARA CHARA LAB</b><small>by STUDIO PATTI</small></a>
+    <nav>
+      <a href="../index.html#articles">記事</a>
+      <a class="pill" href="../index.html#consult">相談する</a>
+    </nav>
+  </div>
+</header>
+
+<div class="art-head">
+  <div class="crumb"><a href="../index.html#articles">記事一覧</a><span>/</span><b></b></div>
+  <span class="pillar log"></span>
+  <h1>自社キャラクター、身内で作ると危ない理由</h1>
+  <div class="author">
+    <div class="avatar">P</div>
+    <div>
+      <p class="name">STUDIO PATTI</p>
+      <p class="meta">2026.07.20 ・ 読了 約3分</p>
+    </div>
+  </div>
+</div>
+
+<article>
+<p>どうも、合同会社スタジオパッチ代表の池本です。</p>
+<p>今日は「まだキャラクターを持っていない企業」の話をします。</p>
+<p>結論から言います。<br>自社キャラクターは、持った方がいいです。<br>……ただし身内だけで作ると、高確率でうまくいきません。</p>
+<h2>よくある始まり方</h2>
+<p>こういう話、本当によく聞きます。</p>
+<p>広報の担当者が「うちも何かマスコットあった方がいいよね」と言い出す。<br>そしてデザインが得意な社員に声をかけると。<br>そしたら「じゃあ試しに描いてみます」と快く引き受けてくれる。</p>
+<p>数日後、ラフ案がいくつか上がってくる。<br>「あ、いいじゃん！」<br>会議室でそんな声が上がって、一番かわいい案に決まる。<br>名刺の端っこに貼って、SNSのアイコンにして、めでたしめでたし。</p>
+<p>……ボクはこの流れ自体は悪くないと思っています。<br>愛着があるし、コストもかからない。<br>でも半年後、だいたいこうなります。</p>
+<h2>半年後によく聞く声</h2>
+<p>「なんかちょっと違うくない?」<br>「これ、誰向けだったんだっけ」<br>「なんか使わないともったいなくない？」</p>
+<p>キャラクターはいる。<br>でも動いていない。<br>SNSの投稿にたまに出てくるだけで、グッズにもならず、イベントにも呼ばれず、社内の引き出しでズルズルと存在感を失っていく。</p>
+<p>これ、なぜ起きるのか。<br>それは「作った理由がない」からだと思っています。</p>
+<p>かわいいから作った。<br>描ける人がいたから作った。<br>それ自体は動機として悪くないのですが、「誰に何を伝えるためのキャラクターか」が抜け落ちたまま形だけ決まってしまう。</p>
+<p>PIXAR曰く、キャラクターは見た目ではなく「欲求」と「恐れ」で定義されるようです。<br>この子は何を望んでいて、何を避けたいのか。<br>そこが決まって初めて、見た目はその器として機能します。<br>身内制作だと、ここを飛ばして「かわいいかどうか」だけで決まりがちです。</p>
+<h2>身内制作の3つの落とし穴</h2>
+<p>理由は3つあります。</p>
+<p>1つ目、設計がないまま形だけ決まる。<br>上で話した通りです。<br>見た目の好みで決めた瞬間、キャラクターは「誰のために存在するか」を失います。</p>
+<p>2つ目、権利の置き場所が曖昧になる。<br>ディズニーは創業初期、ヒットキャラクターの権利を配給会社に握られて丸ごと失った過去があります。<br>そこから「自社制作物の権利は一部たりとも渡さない」という徹底につながりました。</p>
+<p>身内制作だと、これの逆が起きがちです。<br>「あの社員が描いたキャラクター、著作権どうなってるんだっけ」<br>退職したあとに誰も答えられない、という状態です。<br>最初に権利の置き場所を決めておかないと、育てるほど怖くなるキャラクターになってしまいます。</p>
+<p>3つ目、運用の仕組みがない。<br>ディズニーの構造はシンプルです。<br>質の高いキャラクターがファンを生み、映画・グッズ・パークへ展開され、その利益がまた次の質に投資される。<br>この循環があるから資産になります。</p>
+<p>身内制作のキャラクターは、たいてい「生む」で止まります。<br>「作った」で満足してしまい、「これからどう使うか」の設計がない。<br>名刺に貼って終わり、では循環は生まれません。</p>
+<h2>もう一度、結論</h2>
+<p>自社キャラクターは、持つ価値があります。<br>覚えてもらいやすくなるし、行政や地域と組むときの入口にもなるし、社員の愛着も生まれる。<br>ボク自身、これまで60体以上のキャラクターに関わってきて、それは実感しています。</p>
+<p>ただ、身内の熱意だけで作ると、設計・権利・運用の3つが抜け落ちやすい。<br>ここだけ外の目を入れれば、キャラクターは長く働いてくれる資産になります。</p>
+<p>実験は続く。<br>では。</p>
+<p>合同会社スタジオパッチ<br>代表　池本将</p>
+</article>
+
+<section class="cta">
+  <div class="cta-box">
+    <div class="cta-in">
+      <img src="../assets/patti_square.png" alt="おばけのパッチ">
+      <div class="cta-body">
+        <p class="en">LET'S TALK</p>
+        <h3>キャラクターの「一点」、<br>一緒に探しませんか。</h3>
+        <p>設計・契約・育て方。どんな段階でもご相談ください。</p>
+        <a class="btn-y" href="https://x.com/ikemotodir" target="_blank" rel="noopener"><b>𝕏</b>@ikemotodir に DM する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<p class="back"><a href="../index.html#articles">← 記事一覧へ戻る</a></p>
+
+<footer>
+  <div class="foot-in">
+    <p class="f-logo">CHARA CHARA LAB</p>
+    <p>キャラクターの実験室 ／ STUDIO PATTI　© 2026 STUDIO PATTI. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
