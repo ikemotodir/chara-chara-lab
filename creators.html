@@ -45,6 +45,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdro
 .logo small{font-size:9.5px;font-weight:700;letter-spacing:.14em;color:var(--gray)}
 .head-nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:flex-end}
 .head-nav a{font-size:12px;font-weight:700;color:var(--ink);letter-spacing:.06em}
+.head-nav a[aria-current="page"]{color:var(--pink)}
 .head-tag{font-size:11.5px;font-weight:700;color:var(--white);background:var(--pink);border-radius:999px;padding:4px 14px;white-space:nowrap;box-shadow:0 2px 0 var(--pink-d)}
 
 /* HERO */
@@ -312,6 +313,7 @@ footer::before{content:"";position:absolute;top:10px;left:20px;right:20px;border
   <div class="head-in">
     <a class="logo" href="https://ikemotodir.github.io/chara-chara-lab/"><b>CHARA CHARA <span>LAB</span></b><small>by STUDIO PATTI</small></a>
     <nav class="head-nav">
+      <a href="creators.html" aria-current="page">クリエイターズトップ</a>
       <a href="guideline.html">ガイドライン</a>
       <a href="world.html">設定資料</a>
       <span class="head-tag">#パッチワーク</span>
