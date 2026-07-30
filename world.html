@@ -286,6 +286,10 @@ footer::before{content:"";position:absolute;top:10px;left:20px;right:20px;border
 .law ul{padding-left:1.3em}
 .law .hl{background:var(--tint);border-radius:14px;padding:14px 16px;margin-bottom:8px;font-weight:700;font-size:14px;line-height:1.9}
 .law .hl b{color:var(--pink)}
+/* ストップモーション */
+.movie{max-width:720px;margin:0 auto;background:var(--white);border:2px solid var(--line);border-radius:22px;padding:10px;position:relative}
+.movie::before{content:"";position:absolute;inset:6px;border:2px dashed #F6DEE8;border-radius:16px;pointer-events:none;z-index:1}
+.movie video{width:100%;height:auto;display:block;border-radius:14px;background:#000}
 </style>
 </head>
 <body>
@@ -317,7 +321,7 @@ footer::before{content:"";position:absolute;top:10px;left:20px;right:20px;border
         <span class="badge">二次創作OK</span>
       </div>
       <div class="chara-body">
-        <figure><img src="assets/creators/patti_profile.png" alt="パッチの立ち絵"></figure>
+        <figure><img src="assets/creators/patti_profile.png" alt="パッチの立ち絵（表情集）" width="1120" height="680"></figure>
         <ul>
           <li><b>すがた</b>：1つ目。目の下にクマ。ひまわり色のリボン</li>
           <li><b>プロフィール</b>：おばけの子ども・男の子。身長約60cm、体重約3kg</li>
@@ -336,7 +340,7 @@ footer::before{content:"";position:absolute;top:10px;left:20px;right:20px;border
         <span class="badge">公式作品のみ</span>
       </div>
       <div class="chara-body">
-        <figure><img src="assets/creators/mayu_profile.png" alt="マユちゃんの立ち絵"></figure>
+        <figure><img src="assets/creators/mayu_profile.png" alt="マユちゃんの立ち絵" width="1120" height="730" loading="lazy"></figure>
         <ul>
           <li><b>プロフィール</b>：おばけの街に迷い込んだ、ニンゲンの女の子</li>
           <li><b>パッチとの関係</b>：マユちゃんと出会って、パッチは「ニンゲンと仲良くなりたい」と思うようになった</li>
@@ -351,6 +355,7 @@ footer::before{content:"";position:absolute;top:10px;left:20px;right:20px;border
         <span class="badge">二次創作OK</span>
       </div>
       <div class="chara-body">
+        <figure><img src="assets/creators/nolifetown.jpg" alt="おばけの街「No Life Town」" width="1280" height="720" loading="lazy"></figure>
         <ul>
           <li><b>場所</b>：ニンゲンがすむ世界の、すぐとなり</li>
           <li><b>住人</b>：おばけたちはニンゲンをビックリさせるのが大好き</li>
@@ -370,13 +375,26 @@ footer::before{content:"";position:absolute;top:10px;left:20px;right:20px;border
 
 <div class="stitch-div"><i></i><b></b><i></i></div>
 
+<section id="movie">
+  <div class="sec-head reveal">
+    <div class="eyebrow"><i></i><span>STOP MOTION</span><i></i></div>
+    <h2>公式も、実験中。</h2>
+    <p>公式が試作した、パッチのストップモーションムービーです。</p>
+  </div>
+  <figure class="movie reveal">
+    <video src="assets/creators/stopmotion.mp4" poster="assets/creators/stopmotion_poster.jpg" width="960" height="540" autoplay muted loop playsinline controls preload="metadata"></video>
+  </figure>
+</section>
+
+<div class="stitch-div"><i></i><b></b><i></i></div>
+
 <section id="book">
   <div class="sec-head reveal">
     <div class="eyebrow"><i></i><span>ORIGINAL STORY</span><i></i></div>
     <h2>まずは原作を読んでみてください</h2>
   </div>
   <div class="book reveal">
-    <figure><img src="assets/creators/ehon_cover.png" alt="絵本「おばけのパッチ」表紙"></figure>
+    <figure><img src="assets/creators/ehon_cover.png" alt="絵本「おばけのパッチ」表紙" width="840" height="840" loading="lazy"></figure>
     <div class="book-info">
       <h3>絵本「おばけのパッチ」</h3>
       <p>作者・池本将が、娘に「挑戦の大切さ」を伝えるためにボールペンで描いた絵本。すべてはここから始まりました。</p>
