@@ -24,7 +24,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:var(--pink);text-decoration:none}
 a:hover{color:var(--pink-d)}
 a:focus-visible,summary:focus-visible{outline:3px solid var(--yellow);outline-offset:2px;border-radius:4px}
@@ -48,7 +48,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdro
 .head-tag{font-size:11.5px;font-weight:700;color:var(--white);background:var(--pink);border-radius:999px;padding:4px 14px;white-space:nowrap;box-shadow:0 2px 0 var(--pink-d)}
 
 /* HERO */
-.hero{background:linear-gradient(180deg,var(--tint) 0%,#FFF9FB 70%,var(--white) 100%);padding:60px 20px 0;text-align:center;position:relative;overflow:hidden}
+.hero{background:linear-gradient(180deg,var(--tint) 0%,#FFF9FB 70%,var(--white) 100%);padding:46px 20px 0;text-align:center;position:relative;overflow:hidden}
 .hero .bub1{position:absolute;width:260px;height:260px;top:-100px;left:-80px;border-radius:50%;background:var(--tint-y)}
 .hero .bub2{position:absolute;width:180px;height:180px;bottom:-70px;right:-60px;border-radius:50%;background:#FBDCE7}
 .hero .sq1{position:absolute;width:60px;height:60px;top:70px;right:8%;border-radius:14px;background:var(--yellow);opacity:.28;animation:bobble 5s ease-in-out infinite}
@@ -57,17 +57,34 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdro
 .eyebrow{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px}
 .eyebrow span{font-family:var(--maru);font-weight:700;font-size:12.5px;letter-spacing:.24em;color:var(--pink-d);white-space:nowrap}
 .eyebrow i{width:56px;border-top:3px dashed #E7A9C0}
-.hero h1{font-family:var(--maru);font-weight:900;font-size:clamp(26px,6.4vw,46px);line-height:1.5;text-wrap:balance}
+.hero h1{font-family:var(--maru);font-weight:900;font-size:clamp(26px,4.8vw,42px);line-height:1.5;text-wrap:balance}
 .hero h1 em{font-style:normal;color:var(--pink);background:linear-gradient(transparent 70%,var(--yellow) 70%);padding:0 2px}
 .hero .lead{margin:20px auto 0;max-width:560px;font-size:15px;color:var(--gray);text-wrap:pretty}
 .hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
 .hero-badges span{font-family:var(--maru);font-weight:700;font-size:13px;background:var(--white);border:2px dashed var(--pink);color:var(--pink-d);border-radius:999px;padding:7px 18px;box-shadow:0 2px 0 var(--line);white-space:nowrap;display:inline-block;transition:transform .2s ease}
 .hero-badges span:hover{transform:rotate(-3deg) scale(1.08)}
 .hero-badges span.yl{background:var(--tint-y);border-color:#E0AA00;color:#8A6A00;box-shadow:0 2px 0 var(--line-y)}
-.hero-fig{margin:36px auto 0;max-width:340px;background:var(--white);padding:12px;border-radius:26px;box-shadow:0 10px 30px rgba(166,30,77,.12);position:relative;animation:bob 4.5s ease-in-out infinite}
+.hero-fig{margin:30px auto 0;max-width:400px;background:var(--white);padding:12px;border-radius:26px;box-shadow:0 10px 30px rgba(166,30,77,.12);position:relative;animation:bob 4.5s ease-in-out infinite}
 .hero-fig::before{content:"";position:absolute;inset:6px;border:2px dashed var(--line);border-radius:20px;pointer-events:none}
 .hero-fig img{width:100%;border-radius:16px;position:relative}
-.ticker{position:relative;z-index:1;margin-top:44px;padding:13px 0;background:var(--pink);overflow:hidden;box-shadow:inset 0 4px 0 var(--pink-d)}
+.hero-fig .tape{position:absolute;width:92px;height:24px;background:rgba(255,198,41,.8);border-radius:3px;z-index:2}
+.hero-fig .tape.t1{top:-11px;left:30px;transform:rotate(-7deg)}
+.hero-fig .tape.t2{bottom:-11px;right:34px;transform:rotate(5deg)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px}
+@media(min-width:880px){
+  .hero{padding-top:38px}
+  .hero-in{display:grid;grid-template-columns:1.04fr .96fr;gap:46px;align-items:center;max-width:1020px;text-align:left}
+  .hero-copy .eyebrow,.hero-copy .hero-badges,.hero-copy .hero-cta{justify-content:flex-start}
+  .hero .lead{margin-left:0}
+  .hero-fig{max-width:none;margin:8px 0 30px}
+  .ticker{margin-top:26px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .hero h1 em{background-size:0% 100%;background-repeat:no-repeat;background-position:0 0;animation:marker .8s ease .4s forwards}
+}
+@keyframes marker{to{background-size:100% 100%}}
+.ticker{position:relative;z-index:1;margin-top:32px;padding:13px 0;background:var(--pink);overflow:hidden;box-shadow:inset 0 4px 0 var(--pink-d)}
+.ticker:hover div{animation-play-state:paused}
 .ticker::before,.ticker::after{content:"";position:absolute;left:0;right:0;border-top:2px dashed rgba(255,255,255,.5)}
 .ticker::before{top:6px}.ticker::after{bottom:6px}
 .ticker div{display:flex;width:max-content;animation:ribbon 26s linear infinite}
@@ -242,6 +259,7 @@ footer::before{content:"";position:absolute;top:10px;left:20px;right:20px;border
 .pick:hover{transform:translateY(-3px)}
 .pick[aria-pressed="true"]{background:var(--pink);border-color:var(--pink-d);color:var(--white);box-shadow:0 3px 0 var(--pink-d)}
 .pick:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.pick .pi{display:block;font-size:20px;line-height:1.3}
 @media(max-width:430px){.pick{font-size:11.5px;padding:12px 4px;border-radius:13px}}
 .pick-hint{max-width:760px;margin:22px auto 0;text-align:center;color:var(--gray);font-size:13.5px;border:3px dashed var(--line);border-radius:18px;padding:24px 18px}
 .panel{max-width:780px;margin:22px auto 0;background:var(--white);border:2px solid var(--line);border-radius:22px;padding:24px 22px;position:relative}
@@ -304,15 +322,21 @@ footer::before{content:"";position:absolute;top:10px;left:20px;right:20px;border
 <div class="hero">
   <i class="bub1"></i><i class="bub2"></i><i class="sq1"></i><i class="sq2"></i>
   <div class="hero-in">
-    <div class="eyebrow"><i></i><span>PATTI CREATORS PROGRAM</span><i></i></div>
-    <h1>おばけのパッチは<br><em>みんなで創っていい</em><br>キャラクターです。</h1>
-    <p class="lead">ファンアート、ボカロ、MV、グッズ。<br>今日から連絡なしで自由に。販売もOKです。</p>
-    <div class="hero-badges">
-      <span>二次創作OK</span>
-      <span>販売OK</span>
-      <span class="yl">累計売上200万円までロイヤリティ0%</span>
+    <div class="hero-copy">
+      <div class="eyebrow"><i></i><span>PATTI CREATORS PROGRAM</span><i></i></div>
+      <h1>おばけのパッチは<br><em>みんなで創っていい</em><br>キャラクターです。</h1>
+      <p class="lead">ファンアート、ボカロ、MV、グッズ。<br>今日から連絡なしで自由に。販売もOKです。</p>
+      <div class="hero-badges">
+        <span>二次創作OK</span>
+        <span>販売OK</span>
+        <span class="yl">累計売上200万円までロイヤリティ0%</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn solid" href="guideline.html">3分でわかるガイドライン</a>
+        <a class="btn line" href="world.html">設定資料を見る</a>
+      </div>
     </div>
-    <figure class="hero-fig"><img src="assets/creators/patti_hero.png" alt="おばけのパッチと、おばけの街のなかまたち" width="1360" height="918"></figure>
+    <figure class="hero-fig"><i class="tape t1"></i><i class="tape t2"></i><img src="assets/creators/patti_hero.png" alt="おばけのパッチと、おばけの街のなかまたち" width="1360" height="918"></figure>
   </div>
   <div class="ticker" aria-hidden="true"><div>
     <span>映像クリエイター<i class="sep">／</i>アニメーター<i class="sep">／</i>イラストレーター<i class="sep">／</i>漫画家<i class="sep">／</i>音楽クリエイター<i class="sep">／</i>ボカロP<i class="sep">／</i>クラフト作家<i class="sep">／</i>コスプレイヤー<i class="sep">／</i>小説家<i class="sep">／</i>あなたの創作を、待ってます。<i class="sep">／</i></span>
@@ -389,12 +413,12 @@ footer::before{content:"";position:absolute;top:10px;left:20px;right:20px;border
     <p>選ぶと、いま知りたいことだけ。</p>
   </div>
   <div class="pick-grid reveal" role="group" aria-label="クリエイターの種類を選ぶ">
-    <button class="pick" type="button" data-panel="p-video" aria-pressed="false">映像クリエイター<br>アニメーター</button>
-    <button class="pick" type="button" data-panel="p-illust" aria-pressed="false">イラストレーター<br>漫画家</button>
-    <button class="pick" type="button" data-panel="p-music" aria-pressed="false">音楽クリエイター<br>ボカロP</button>
-    <button class="pick" type="button" data-panel="p-craft" aria-pressed="false">クラフト作家<br>ハンドメイド</button>
-    <button class="pick" type="button" data-panel="p-cos" aria-pressed="false">コスプレイヤー<br>写真・被写体</button>
-    <button class="pick" type="button" data-panel="p-novel" aria-pressed="false">小説家<br>その他の創作</button>
+    <button class="pick" type="button" data-panel="p-video" aria-pressed="false"><span class="pi">🎬</span>映像クリエイター<br>アニメーター</button>
+    <button class="pick" type="button" data-panel="p-illust" aria-pressed="false"><span class="pi">🖌️</span>イラストレーター<br>漫画家</button>
+    <button class="pick" type="button" data-panel="p-music" aria-pressed="false"><span class="pi">🎵</span>音楽クリエイター<br>ボカロP</button>
+    <button class="pick" type="button" data-panel="p-craft" aria-pressed="false"><span class="pi">🧵</span>クラフト作家<br>ハンドメイド</button>
+    <button class="pick" type="button" data-panel="p-cos" aria-pressed="false"><span class="pi">📷</span>コスプレイヤー<br>写真・被写体</button>
+    <button class="pick" type="button" data-panel="p-novel" aria-pressed="false"><span class="pi">✒️</span>小説家<br>その他の創作</button>
   </div>
 
   <div class="pick-hint" id="pick-hint">↑ タップすると、あなたに必要な情報だけ表示します。</div>
@@ -501,6 +525,12 @@ footer::before{content:"";position:absolute;top:10px;left:20px;right:20px;border
       <div class="file">FILE 03</div>
       <h3>原作絵本（無料公開中）</h3>
       <p>すべてが始まった一冊。まずはここから。</p>
+      <span class="arw">→</span>
+    </a>
+    <a class="filecard reveal" href="world.html#movie">
+      <div class="file">FILE 04</div>
+      <h3>公式ストップモーション</h3>
+      <p>公式が試作した、6秒のムービー。パッチが動きます。</p>
       <span class="arw">→</span>
     </a>
   </div>
