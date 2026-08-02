@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "【週報を書く理由】数字より先にあるもの",
+      "date": "2026.08.02",
+      "pillar": "実験ログ",
+      "file": "posts/20260802-c8tb4.html",
+      "thumb": "assets/thumb_post_20260802-c8tb4.jpg"
+    },
+    {
       "title": "キャラクターの口調と一人称は、「性格」じゃなく「関係性」で決まる",
       "date": "2026.08.01",
       "pillar": "設計理論",
