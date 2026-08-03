@@ -28,7 +28,7 @@ a{color:inherit;text-decoration:none}
 .logo{display:flex;align-items:baseline;gap:12px}
 .logo b{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:22px;letter-spacing:.02em;color:var(--pink)}
 .logo small{font-size:11px;letter-spacing:.16em;color:#b9a9af;font-weight:500}
-nav{display:flex;align-items:center;gap:30px}
+nav{display:flex;align-items:center;gap:22px}
 nav a{font-size:14px;font-weight:500;color:#4a4a4a}
 nav .pill{font-size:13px;font-weight:700;color:#fff;background:var(--pink);padding:10px 20px;border-radius:999px}
 
@@ -76,6 +76,8 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .cover.theory{background:var(--theory-bg)}
 .cover.real{background:#efe9eb}
 .cover.world{background:var(--log-bg)}
+.cover.img{overflow:hidden}
+.cover.img img{width:100%;height:100%;object-fit:cover;display:block}
 .badge{position:absolute;top:12px;left:12px;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;border:1px solid}
 .badge.log{background:var(--pink);color:#fff;border-color:var(--pink)}
 .badge.theory{background:var(--theory-bg);color:var(--theory-ink);border-color:var(--theory-border)}
@@ -261,8 +263,8 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 .copyright{background:var(--pink)}
 .copyright div{max-width:1120px;margin:0 auto;padding:20px 32px;font-size:12px;color:#fff;letter-spacing:.04em}
 
+@media(max-width:960px){nav a:not(.pill){display:none}}
 @media(max-width:860px){
-  nav a:not(.pill){display:none}
   .hero-in{grid-template-columns:1fr;min-height:auto}
   .hero-copy{padding:64px 0 0;text-align:center}
   .hero-copy p{margin:0 auto 32px}
@@ -292,6 +294,7 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
       <a href="#studio">ATELIER</a>
       <a href="#world">PATTI's WORLD</a>
       <a href="#service">SERVICE</a>
+      <a href="creators.html">CREATORS</a>
       <a class="pill" href="#consult">相談する</a>
     </nav>
   </div>
@@ -344,12 +347,12 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
     </div>
   </div>
   <ul class="cards">
-<li class="card"><a href="posts/20260803-efcnt.html"><div class="cover log"><span class="glyph">🧪</span><span class="badge log"></span></div><div class="card-body"><h3>【週報を書く理由】数字より先にあるもの</h3><time>2026.08.03</time></div></a></li>
-<li class="card"><a href="posts/20260803-9kcbg.html"><div class="cover log"><span class="glyph">🧪</span><span class="badge log"></span></div><div class="card-body"><h3>キャラクターの口調と一人称は、「性格」じゃなく「関係性」で決まる</h3><time>2026.08.03</time></div></a></li>
-<li class="card"><a href="posts/20260803-hizwu.html"><div class="cover log"><span class="glyph">🧪</span><span class="badge log"></span></div><div class="card-body"><h3>【行政案件のリアル】決裁者が一人じゃない現場で学んだこと</h3><time>2026.08.03</time></div></a></li>
-<li class="card"><a href="posts/20260803-mskl7.html"><div class="cover log"><span class="glyph">🧪</span><span class="badge log"></span></div><div class="card-body"><h3>キャラクターデザインは、黒く塗りつぶして考える</h3><time>2026.08.03</time></div></a></li>
-<li class="card"><a href="posts/20260731-ibunh.html"><div class="cover log"><span class="glyph">🧪</span><span class="badge log"></span></div><div class="card-body"><h3>発信の数字は、褒めてくれない</h3><time>2026.07.31</time></div></a></li>
-<li class="card"><a href="posts/20260730-05p1o.html"><div class="cover log"><span class="glyph">🧪</span><span class="badge log"></span></div><div class="card-body"><h3>【実験ログ】キャラクターの動かし方を検証してわかったこと</h3><time>2026.07.30</time></div></a></li>
+<li class="card"><a href="posts/20260802-c8tb4.html"><div class="cover img log"><img src="assets/thumb_post_20260802-c8tb4.jpg" alt="" loading="lazy"><span class="badge log">実験ログ</span></div><div class="card-body"><h3>【週報を書く理由】数字より先にあるもの</h3><time>2026.08.02</time></div></a></li>
+<li class="card"><a href="posts/20260801-b428g.html"><div class="cover img theory"><img src="assets/thumb_post_20260801-b428g.jpg" alt="" loading="lazy"><span class="badge theory">設計理論</span></div><div class="card-body"><h3>キャラクターの口調と一人称は、「性格」じゃなく「関係性」で決まる</h3><time>2026.08.01</time></div></a></li>
+<li class="card"><a href="posts/20260801-uphpm.html"><div class="cover img real"><img src="assets/thumb_post_20260801-uphpm.jpg" alt="" loading="lazy"><span class="badge real">案件のリアル</span></div><div class="card-body"><h3>【行政案件のリアル】決裁者が一人じゃない現場で学んだこと</h3><time>2026.08.01</time></div></a></li>
+<li class="card"><a href="posts/20260731-yrw8t.html"><div class="cover img theory"><img src="assets/thumb_post_20260731-yrw8t.jpg" alt="" loading="lazy"><span class="badge theory">設計理論</span></div><div class="card-body"><h3>キャラクターデザインは、黒く塗りつぶして考える</h3><time>2026.07.31</time></div></a></li>
+<li class="card"><a href="posts/20260731-mnihu.html"><div class="cover img log"><img src="assets/thumb_post_20260731-mnihu.jpg" alt="" loading="lazy"><span class="badge log">実験ログ</span></div><div class="card-body"><h3>発信の数字は、褒めてくれない</h3><time>2026.07.31</time></div></a></li>
+<li class="card"><a href="posts/20260730-05p1o.html"><div class="cover img log"><img src="assets/thumb_post_20260730-05p1o.jpg" alt="" loading="lazy"><span class="badge log">実験ログ</span></div><div class="card-body"><h3>【実験ログ】キャラクターの動かし方を検証してわかったこと</h3><time>2026.07.30</time></div></a></li>
   </ul>
   <div class="more-link"><a href="articles.html">すべての記事はこちら →</a></div>
 </main>
@@ -449,13 +452,13 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
 <section class="program" id="program">
   <div class="program-in">
     <div class="program-left">
-      <span class="soon">COMING SOON</span>
+      <span class="soon">NOW OPEN</span>
       <div>
-        <h2>パッチクリエイターズプログラム、準備中。</h2>
-        <p>おばけのパッチを一緒に育てるクリエイターを募集します。詳細は近日公開。</p>
+        <h2>パッチクリエイターズプログラム、はじまりました。</h2>
+        <p>おばけのパッチは、みんなで創っていいキャラクター。二次創作OK・販売OK。</p>
       </div>
     </div>
-    <a class="program-link" href="https://x.com/ikemotodir" target="_blank" rel="noopener">最新情報を受け取る →</a>
+    <a class="program-link" href="creators.html">くわしく見る →</a>
   </div>
 </section>
 
@@ -533,7 +536,7 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
       <p class="en">SERVICE 02</p>
       <h3>アニメーション制作</h3>
       <p>キャラクターに、動きと呼吸を。Live2D・3DCG・モーショングラフィックス・VFX・手づくりのコマ撮りまで、信頼できる協力スタジオと連携し、用途と予算に合った「最適な動かし方」をご提案します。</p>
-      <span class="modal-soon">⏳ 詳細ページ準備中</span>
+      <a class="modal-cta" href="service-anime.html">詳細ページを見る →</a>
     </div>
   </div>
 </div>
