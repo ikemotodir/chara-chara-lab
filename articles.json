@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "【配色設計の話】色は、性格より先に喋る",
+      "date": "2026.08.03",
+      "pillar": "設計理論",
+      "file": "posts/20260803-4ukun.html",
+      "thumb": "assets/thumb_post_20260803-4ukun.jpg"
+    },
+    {
       "title": "【実験ログ】AIにキャラクターの人格を作れるか",
       "date": "2026.08.03",
       "pillar": "実験ログ",
