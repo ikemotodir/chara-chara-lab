@@ -2,213 +2,241 @@
   "articles": [
     {
       "title": "【週報を書く理由】数字より先にあるもの",
-      "date": "2026.08.03",
-      "pillar": "",
-      "file": "posts/20260803-efcnt.html"
+      "date": "2026.08.02",
+      "pillar": "実験ログ",
+      "file": "posts/20260802-c8tb4.html",
+      "thumb": "assets/thumb_post_20260802-c8tb4.jpg"
     },
     {
       "title": "キャラクターの口調と一人称は、「性格」じゃなく「関係性」で決まる",
-      "date": "2026.08.03",
-      "pillar": "",
-      "file": "posts/20260803-9kcbg.html"
+      "date": "2026.08.01",
+      "pillar": "設計理論",
+      "file": "posts/20260801-b428g.html",
+      "thumb": "assets/thumb_post_20260801-b428g.jpg"
     },
     {
       "title": "【行政案件のリアル】決裁者が一人じゃない現場で学んだこと",
-      "date": "2026.08.03",
-      "pillar": "",
-      "file": "posts/20260803-hizwu.html"
+      "date": "2026.08.01",
+      "pillar": "案件のリアル",
+      "file": "posts/20260801-uphpm.html",
+      "thumb": "assets/thumb_post_20260801-uphpm.jpg"
     },
     {
       "title": "キャラクターデザインは、黒く塗りつぶして考える",
-      "date": "2026.08.03",
-      "pillar": "",
-      "file": "posts/20260803-mskl7.html"
+      "date": "2026.07.31",
+      "pillar": "設計理論",
+      "file": "posts/20260731-yrw8t.html",
+      "thumb": "assets/thumb_post_20260731-yrw8t.jpg"
     },
     {
       "title": "発信の数字は、褒めてくれない",
       "date": "2026.07.31",
-      "pillar": "",
-      "file": "posts/20260731-ibunh.html"
+      "pillar": "実験ログ",
+      "file": "posts/20260731-mnihu.html",
+      "thumb": "assets/thumb_post_20260731-mnihu.jpg"
     },
     {
       "title": "【実験ログ】キャラクターの動かし方を検証してわかったこと",
       "date": "2026.07.30",
-      "pillar": "",
-      "file": "posts/20260730-05p1o.html"
+      "pillar": "実験ログ",
+      "file": "posts/20260730-05p1o.html",
+      "thumb": "assets/thumb_post_20260730-05p1o.jpg"
     },
     {
       "title": "見積もりは「時間」じゃなく何で決まるのか",
       "date": "2026.07.30",
-      "pillar": "",
-      "file": "posts/20260730-lqj5w.html"
+      "pillar": "案件のリアル",
+      "file": "posts/20260730-lqj5w.html",
+      "thumb": "assets/thumb_post_20260730-lqj5w.jpg"
     },
     {
       "title": "【オープンIP戦略】閉じるか開くか……じゃない話",
       "date": "2026.07.29",
-      "pillar": "",
-      "file": "posts/20260729-ip.html"
+      "pillar": "設計理論",
+      "file": "posts/20260729-ip.html",
+      "thumb": "assets/thumb_post_20260729-ip.jpg"
     },
     {
       "title": "【実験ログ】キャラクターデザインツール、比較で見えたこと",
       "date": "2026.07.29",
-      "pillar": "",
-      "file": "posts/20260729-vhsdg.html"
+      "pillar": "実験ログ",
+      "file": "posts/20260729-vhsdg.html",
+      "thumb": "assets/thumb_post_20260729-vhsdg.jpg"
     },
     {
       "title": "ご当地キャラクターに学ぶ「愛される設計」の話",
       "date": "2026.07.28",
-      "pillar": "",
-      "file": "posts/20260728-e2zq4.html"
+      "pillar": "設計理論",
+      "file": "posts/20260728-e2zq4.html",
+      "thumb": "assets/thumb_post_20260728-e2zq4.jpg"
     },
     {
       "title": "キャラクターを守るのは「絵の腕前」じゃなく「契約書」",
       "date": "2026.07.28",
-      "pillar": "",
-      "file": "posts/20260728-0y9hw.html"
+      "pillar": "案件のリアル",
+      "file": "posts/20260728-0y9hw.html",
+      "thumb": "assets/thumb_post_20260728-0y9hw.jpg"
     },
     {
       "title": "キャラクターの「欲しいもの」と「本当に必要なもの」",
       "date": "2026.07.27",
-      "pillar": "",
-      "file": "posts/20260727-bjmpl.html"
+      "pillar": "設計理論",
+      "file": "posts/20260727-bjmpl.html",
+      "thumb": "assets/thumb_post_20260727-bjmpl.jpg"
     },
     {
       "title": "「AI×キャラクター制作」の話",
       "date": "2026.07.27",
-      "pillar": "",
-      "file": "posts/20260727-ai.html"
+      "pillar": "設計理論",
+      "file": "posts/20260727-ai.html",
+      "thumb": "assets/thumb_post_20260727-ai.jpg"
     },
     {
       "title": "キャラクターデザイン、多数決で決めてない？",
       "date": "2026.07.26",
-      "pillar": "",
-      "file": "posts/20260726-l7izl.html"
+      "pillar": "設計理論",
+      "file": "posts/20260726-l7izl.html",
+      "thumb": "assets/thumb_post_20260726-l7izl.jpg"
     },
     {
       "title": "「キャラクター配色設計」～色は「なんとなく」で決めていいものじゃない。",
       "date": "2026.07.26",
-      "pillar": "",
-      "file": "posts/20260726-4v6rz.html"
-    },
-    {
-      "title": "「キャラクター配色設計」～色は「なんとなく」で決めていいものじゃない。",
-      "date": "2026.07.26",
-      "pillar": "",
-      "file": "posts/20260726-2kyi3.html"
+      "pillar": "設計理論",
+      "file": "posts/20260726-4v6rz.html",
+      "thumb": "assets/thumb_post_20260726-4v6rz.jpg"
     },
     {
       "title": "キャラクターの口調と一人称の決め方",
       "date": "2026.07.25",
-      "pillar": "",
-      "file": "posts/20260725-9gs9l.html"
+      "pillar": "設計理論",
+      "file": "posts/20260725-9gs9l.html",
+      "thumb": "assets/thumb_post_20260725-9gs9l.jpg"
     },
     {
       "title": "名前は忘れても、顔は覚えている",
       "date": "2026.07.25",
-      "pillar": "",
-      "file": "posts/20260725-e1efi.html"
+      "pillar": "設計理論",
+      "file": "posts/20260725-e1efi.html",
+      "thumb": "assets/thumb_post_20260725-e1efi.jpg"
     },
     {
       "title": "名刺、SNS、パンフレット…バラバラな“顔”を統一するのはキャラクターの仕事",
       "date": "2026.07.24",
-      "pillar": "",
-      "file": "posts/20260724-sns.html"
+      "pillar": "設計理論",
+      "file": "posts/20260724-sns.html",
+      "thumb": "assets/thumb_post_20260724-sns.jpg"
     },
     {
       "title": "著作権だけじゃ守れない「企業キャラクターの多層防御」",
       "date": "2026.07.24",
-      "pillar": "",
-      "file": "posts/20260724-uklr0.html"
+      "pillar": "案件のリアル",
+      "file": "posts/20260724-uklr0.html",
+      "thumb": "assets/thumb_post_20260724-uklr0.jpg"
     },
     {
       "title": "担当者が辞めても、キャラクターは残る",
       "date": "2026.07.23",
-      "pillar": "",
-      "file": "posts/20260723-8f2ej.html"
+      "pillar": "設計理論",
+      "file": "posts/20260723-8f2ej.html",
+      "thumb": "assets/thumb_post_20260723-8f2ej.jpg"
     },
     {
       "title": "キャラクター制作「その見積もりは何の値段？」",
       "date": "2026.07.23",
-      "pillar": "",
-      "file": "posts/20260723-32tx0.html"
+      "pillar": "案件のリアル",
+      "file": "posts/20260723-32tx0.html",
+      "thumb": "assets/thumb_post_20260723-32tx0.jpg"
     },
     {
       "title": "キャラクターを持つ企業が、静かに得している理由",
       "date": "2026.07.22",
-      "pillar": "",
-      "file": "posts/20260722-u5oj3.html"
+      "pillar": "設計理論",
+      "file": "posts/20260722-u5oj3.html",
+      "thumb": "assets/thumb_post_20260722-u5oj3.jpg"
     },
     {
       "title": "自社キャラクターを「持つ企業」と「持たない企業」の差",
       "date": "2026.07.22",
-      "pillar": "",
-      "file": "posts/20260722-wb673.html"
+      "pillar": "設計理論",
+      "file": "posts/20260722-wb673.html",
+      "thumb": "assets/thumb_post_20260722-wb673.jpg"
     },
     {
       "title": "パッチが住む町「No Life Town」の話と、社内でキャラを作ってはいけない理由",
       "date": "2026.07.20",
-      "pillar": "",
-      "file": "posts/20260720-no-life-town.html"
+      "pillar": "パッチの世界",
+      "file": "posts/20260720-no-life-town.html",
+      "thumb": "assets/thumb_post_20260720-no-life-town.jpg"
     },
     {
       "title": "キャラクターの「欲しい」と「必要」は違う、という話",
       "date": "2026.07.20",
-      "pillar": "",
-      "file": "posts/20260720-zjy4h.html"
+      "pillar": "設計理論",
+      "file": "posts/20260720-zjy4h.html",
+      "thumb": "assets/thumb_post_20260720-zjy4h.jpg"
     },
     {
       "title": "自社キャラクター、身内で作ると危ない理由",
       "date": "2026.07.20",
-      "pillar": "",
-      "file": "posts/20260720-l7mwy.html"
+      "pillar": "設計理論",
+      "file": "posts/20260720-l7mwy.html",
+      "thumb": "assets/thumb_post_20260720-l7mwy.jpg"
     },
     {
       "title": "【週報】発信を自動化して、わかったこと。時間は「守る」ものだ",
       "date": "2026.07.12",
       "pillar": "実験ログ",
-      "file": "posts/20260712-pk3ly.html"
+      "file": "posts/20260712-pk3ly.html",
+      "thumb": "assets/thumb_post_20260712-pk3ly.jpg"
     },
     {
       "title": "初音ミクと東方に学ぶ「キャラを開放すると、強くなる」という逆転",
       "date": "2026.07.12",
       "pillar": "設計理論",
-      "file": "posts/20260712-6q5ll.html"
+      "file": "posts/20260712-6q5ll.html",
+      "thumb": "assets/thumb_post_20260712-6q5ll.jpg"
     },
     {
       "title": "動画生成AIを「自分のキャラ」で比べる前に、決めるべき3つのこと",
       "date": "2026.07.12",
       "pillar": "実験ログ",
-      "file": "posts/20260712-ai-3.html"
+      "file": "posts/20260712-ai-3.html",
+      "thumb": "assets/thumb_post_20260712-ai-3.jpg"
     },
     {
       "title": "眠れるマスコットを、起こす。新しく作るより、生き返らせる方が安い",
       "date": "2026.07.12",
       "pillar": "パッチの世界",
-      "file": "posts/20260712-kbcbn.html"
+      "file": "posts/20260712-kbcbn.html",
+      "thumb": "assets/thumb_post_20260712-kbcbn.jpg"
     },
     {
       "title": "契約書で見つけた「クリエイターに不利な6つの条項」。実体験で話す",
       "date": "2026.07.12",
       "pillar": "案件のリアル",
-      "file": "posts/20260712-6.html"
+      "file": "posts/20260712-6.html",
+      "thumb": "assets/thumb_post_20260712-6.jpg"
     },
     {
       "title": "愛されるキャラにある「2つの欲」",
       "date": "2026.07.12",
       "pillar": "設計理論",
-      "file": "posts/20260712-2.html"
+      "file": "posts/20260712-2.html",
+      "thumb": "assets/thumb_post_20260712-2.jpg"
     },
     {
       "title": "おばけのパッチ誕生秘話",
       "date": "2026.07.12",
       "pillar": "パッチの世界",
-      "file": "posts/20260712-klzez.html"
+      "file": "posts/20260712-klzez.html",
+      "thumb": "assets/thumb_post_20260712-klzez.jpg"
     },
     {
       "title": "キャラクターは「描いて終わり」じゃない",
       "date": "2026.07.12",
       "pillar": "設計理論",
-      "file": "posts/20260712-61it3.html"
+      "file": "posts/20260712-61it3.html",
+      "thumb": "assets/thumb_post_20260712-61it3.jpg"
     }
   ]
 }
