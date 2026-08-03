@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "【実験ログ】AIにキャラクターの人格を作れるか",
+      "date": "2026.08.03",
+      "pillar": "実験ログ",
+      "file": "posts/20260803-ai.html",
+      "thumb": "assets/thumb_post_20260803-ai.jpg"
+    },
+    {
       "title": "【週報を書く理由】数字より先にあるもの",
       "date": "2026.08.02",
       "pillar": "実験ログ",
