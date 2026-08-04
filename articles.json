@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "ご当地キャラクターに学ぶ「愛される設計」",
+      "date": "2026.08.04",
+      "pillar": "設計理論",
+      "file": "posts/20260804-7k4kw.html",
+      "thumb": "assets/thumb_post_20260804-7k4kw.jpg"
+    },
+    {
       "title": "【実験ログ】AIにキャラクターの人格を作れるか",
       "date": "2026.08.03",
       "pillar": "実験ログ",
