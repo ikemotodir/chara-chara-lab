@@ -140,6 +140,7 @@ section{padding:52px 0}
 
 /* ○△× 早見表 */
 .chart{border:2px solid var(--line);border-radius:22px;overflow:hidden;background:var(--white);margin-bottom:20px}
+@media(min-width:900px){.chart-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}.chart-wrap .chart{margin-bottom:0}}
 .chart-head{display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--tint);border-bottom:2px dashed var(--line)}
 .chart-head .mark{flex:none;width:38px;height:38px;border-radius:50%;background:var(--white);color:var(--pink);display:flex;align-items:center;justify-content:center;font-family:var(--maru);font-weight:900;font-size:19px;box-shadow:0 2px 0 var(--line)}
 .chart-head b{font-family:var(--maru);font-weight:900;font-size:16px;color:var(--pink-d)}
@@ -377,13 +378,14 @@ section{padding:52px 0}
     <div class="eyebrow"><i></i><span>QUICK CHART</span><i></i></div>
     <h2>○△× 早見表</h2>
   </div>
+  <div class="chart-wrap">
   <div class="chart reveal">
     <div class="chart-head"><span class="mark">○</span><b>連絡なしで、自由にどうぞ</b></div>
     <div class="chart-body">
-      <div><h4>創る・投稿する</h4><p>ファンアート、漫画、音楽、MV、コスプレ。かたちは自由。</p></div>
-      <div><h4>動画・配信の収益化</h4><p>YouTube・ニコニコ動画などのパートナープログラムOK。</p></div>
-      <div><h4>個人の販売</h4><p>同人イベもネット販売もOK。販売時は「©おばけのパッチ」表記を。</p></div>
-      <div><h4>オリジナル人間キャラクター × おばけの世界</h4><p>あなたが生み出した人間キャラクターとの共演、大歓迎。</p></div>
+      <div><h4>創る・投稿する</h4><p>ファンアート・漫画・音楽・MV・コスプレ、自由に。</p></div>
+      <div><h4>動画・配信の収益化</h4><p>YouTube・ニコニコの収益化もOK。</p></div>
+      <div><h4>個人の販売</h4><p>同人イベもネット販売も。「©おばけのパッチ」表記を。</p></div>
+      <div><h4>オリジナル人間キャラクター × おばけの世界</h4><p>あなたのオリジナル人間キャラクターと共演OK。</p></div>
     </div>
   </div>
   <div class="chart mid reveal">
@@ -401,6 +403,7 @@ section{padding:52px 0}
       <div><h4>AIへの学習・AI生成への利用</h4><p>パッチの画像・作品のAI利用は禁止。</p></div>
       <div><h4>公序良俗に反する表現・公式と誤認させる行為</h4><p>くわしくはガイドラインで。</p></div>
     </div>
+  </div>
   </div>
   <div class="midcta reveal" style="padding-top:8px">
     <a class="btn line" href="guideline.html">ガイドライン全文を読む（3分）</a>

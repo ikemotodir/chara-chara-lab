@@ -299,6 +299,9 @@ a{color:inherit}
   </div>
 </div>
 
+<div class="vlight" id="vlight" hidden>
+  <button class="vlight-x" type="button" aria-label="閉じる">&times;</button>
+  <div class="vlight-box"><div class="vlight-frame"></div></div>
 <script>
 (function(){
   function open(id){var m=document.getElementById(id);if(m){m.classList.add("open");document.body.style.overflow="hidden";}}
@@ -357,9 +360,7 @@ a{color:inherit}
   document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!vl.hidden)closeV();});
 })();
 </script>
-<div class="vlight" id="vlight" hidden>
-  <button class="vlight-x" type="button" aria-label="閉じる">&times;</button>
-  <div class="vlight-box"><div class="vlight-frame"></div></div>
+
 </div>
 </body>
 </html>

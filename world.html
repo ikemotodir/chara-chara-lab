@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>設定資料｜おばけのパッチ - CHARA CHARA LAB</title>
-<meta name="description" content="おばけのパッチの設定資料。パッチのプロフィール、おばけの街「No Life Town」、原作絵本。">
-<meta property="og:title" content="設定資料｜おばけのパッチ">
+<title>Spookpedia｜おばけのパッチ 設定資料 - CHARA CHARA LAB</title>
+<meta name="description" content="Spookpedia｜おばけのパッチの設定資料室。パッチのプロフィール、おばけの街「No Life Town」、原作絵本を検索して読めます。">
+<meta property="og:title" content="Spookpedia｜おばけのパッチ 設定資料">
 <meta property="og:type" content="website">
 <meta property="og:description" content="パッチのプロフィール、おばけの街「No Life Town」、原作絵本。">
 <meta property="og:url" content="https://ikemotodir.github.io/chara-chara-lab/world.html">
@@ -292,6 +292,62 @@ section{padding:52px 0}
 .movie{max-width:720px;margin:0 auto;background:var(--white);border:2px solid var(--line);border-radius:22px;padding:10px;position:relative}
 .movie::before{content:"";position:absolute;inset:6px;border:2px dashed #F6DEE8;border-radius:16px;pointer-events:none;z-index:1}
 .movie video{width:100%;height:auto;display:block;border-radius:14px;background:#000}
+/* ===== Spookpedia ===== */
+.pedia-search{max-width:520px;margin:20px auto 0;position:relative}
+.pedia-search input{width:100%;font-family:var(--sans);font-size:15px;padding:13px 18px 13px 42px;border:2px solid var(--line);border-radius:999px;background:var(--white);color:var(--ink)}
+.pedia-search input:focus{outline:none;border-color:var(--pink)}
+.pedia-search i{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-style:normal;font-size:14px;pointer-events:none;color:var(--gray)}
+.pedia{display:grid;grid-template-columns:1fr;gap:20px;padding:32px 0 8px}
+@media(min-width:860px){.pedia{grid-template-columns:206px 1fr;gap:30px;align-items:start}.pedia-nav{position:sticky;top:74px}}
+.pn-group{margin-bottom:16px}
+.pn-group h3{font-family:var(--maru);font-weight:900;font-size:12.5px;color:var(--pink-d);padding-bottom:7px;border-bottom:2px dashed var(--line);margin-bottom:5px}
+.pn-item{display:block;width:100%;text-align:left;font-family:var(--sans);font-size:13.5px;font-weight:700;color:var(--ink);background:none;border:0;padding:8px 10px;border-radius:9px;cursor:pointer}
+.pn-item:hover{background:var(--tint)}
+.pn-item[aria-current="true"]{background:var(--pink);color:var(--white)}
+.pn-item:disabled{color:#B6AFBB;cursor:default}
+.pn-item:disabled:hover{background:none}
+.pn-item:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+@media(max-width:859px){
+  .pedia-nav{display:flex;flex-wrap:wrap;gap:8px}
+  .pn-group{margin:0;display:contents}
+  .pn-group h3{display:none}
+  .pn-item{width:auto;border:2px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12.5px}
+}
+.px-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:14px}
+.px-card{display:block;text-align:left;background:var(--white);border:2px solid var(--line);border-radius:16px;padding:0;overflow:hidden;cursor:pointer;font:inherit;transition:transform .15s,box-shadow .15s}
+.px-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(166,30,77,.14)}
+.px-card:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.px-card:disabled{opacity:.5;cursor:default}
+.px-card:disabled:hover{transform:none;box-shadow:none}
+.px-thumb{display:block;aspect-ratio:16/10;background:var(--tint);overflow:hidden}
+.px-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.px-thumb.gl{display:flex;align-items:center;justify-content:center;font-size:34px}
+.px-b{display:block;padding:12px 14px}
+.px-b b{display:block;font-family:var(--maru);font-weight:900;font-size:14.5px;color:var(--ink);line-height:1.45}
+.px-b span{display:block;font-size:11.5px;color:var(--gray);margin-top:3px}
+.entry{background:var(--white);border:2px solid var(--line);border-radius:20px;padding:24px 22px}
+.entry.human{border-color:var(--line-y)}
+.entry-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:14px;border-bottom:2px dashed var(--line);margin-bottom:16px}
+.entry-head .cat{font-family:var(--maru);font-weight:700;font-size:11px;letter-spacing:.14em;color:var(--pink-d)}
+.entry-head h2{font-family:var(--maru);font-weight:900;font-size:22px;line-height:1.35;margin-top:3px}
+.entry-head h2 span{font-family:var(--sans);font-weight:400;font-size:12.5px;color:var(--gray);display:block;margin-top:3px}
+.entry-head .badge{flex:none;font-family:var(--maru);font-weight:700;font-size:11.5px;background:var(--pink);color:var(--white);border-radius:999px;padding:5px 13px;white-space:nowrap}
+.entry-head .badge.dark{background:var(--ink)}
+.entry figure{margin:0 0 18px;border:2px dashed var(--line);border-radius:14px;padding:8px;background:#FFFCFD}
+.entry figure img,.entry figure video{width:100%;border-radius:9px;display:block}
+.entry dl{display:grid;grid-template-columns:92px 1fr;font-size:13.5px;line-height:1.75}
+.entry dt{font-weight:700;color:var(--pink-ink);padding:9px 0;border-bottom:1px dashed #F0DCE4}
+.entry dd{padding:9px 0;border-bottom:1px dashed #F0DCE4}
+.entry.human dt{color:#8A6A00}
+@media(max-width:520px){.entry dl{grid-template-columns:1fr}.entry dt{padding:9px 0 0;border-bottom:none}.entry dd{padding-top:2px}}
+.entry .note{font-size:12.5px;color:var(--gray);margin-top:12px;line-height:1.75}
+.entry .lock{display:inline-flex;align-items:center;gap:6px;font-family:var(--maru);font-weight:700;font-size:12px;background:var(--ink);color:var(--white);border-radius:999px;padding:6px 15px;margin-top:14px}
+.entry .btn-row{margin-top:16px}
+.entry .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.entry .chips span{font-size:12.5px;font-weight:700;background:var(--tint);border-radius:999px;padding:5px 13px;color:var(--pink-ink)}
+.pback{display:inline-flex;align-items:center;gap:6px;font-family:var(--maru);font-weight:700;font-size:12.5px;color:var(--pink);background:none;border:0;cursor:pointer;padding:4px 0;margin-bottom:12px}
+.pback:hover{color:var(--pink-d)}
+.no-hit{text-align:center;color:var(--gray);font-size:14px;padding:44px 0}
 </style>
 </head>
 <body>
@@ -309,99 +365,135 @@ section{padding:52px 0}
 </header>
 
 <div class="page-hero">
-  <div class="eyebrow"><i></i><span>CHARACTER FILE</span><i></i></div>
-  <h1>設定資料</h1>
-  <p class="lead">創るまえの、世界の予習に。</p>
+  <div class="eyebrow"><i></i><span>SPOOKPEDIA</span><i></i></div>
+  <h1>Spookpedia</h1>
+  <p class="lead">おばけの世界の、設定資料室。創るまえの予習に。</p>
+  <div class="pedia-search"><i>&#128269;</i><input type="search" id="pSearch" placeholder="キーワードで探す（例：パッチ、街、絵本）" autocomplete="off" aria-label="設定資料を検索"></div>
 </div>
 
 <main>
+<div class="pedia">
 
-<section id="chara" style="padding-top:40px">
-  <div class="chara-grid">
-    <div class="chara reveal">
-      <div class="chara-head">
-        <div><div class="file">FILE 01｜主人公・おばけ</div><h3>パッチ <span>Patti the Spook</span></h3></div>
+  <aside class="pedia-nav" id="pNav">
+    <div class="pn-group">
+      <h3>&#128123; おばけ</h3>
+      <button class="pn-item" type="button" data-entry="patti">パッチ</button>
+      <button class="pn-item" type="button" disabled>ミーン（準備中）</button>
+      <button class="pn-item" type="button" disabled>モゥ（準備中）</button>
+    </div>
+    <div class="pn-group">
+      <h3>&#129485; ニンゲン</h3>
+      <button class="pn-item" type="button" data-entry="mayu">マユちゃん</button>
+    </div>
+    <div class="pn-group">
+      <h3>&#127962; 世界</h3>
+      <button class="pn-item" type="button" data-entry="town">No Life Town</button>
+    </div>
+    <div class="pn-group">
+      <h3>&#128218; 原作</h3>
+      <button class="pn-item" type="button" data-entry="book">絵本「おばけのパッチ」</button>
+      <button class="pn-item" type="button" data-entry="movie">ストップモーション</button>
+    </div>
+    <div class="pn-group">
+      <h3>&#127912; 創作リソース</h3>
+      <button class="pn-item" type="button" data-entry="kit">素材キット</button>
+    </div>
+  </aside>
+
+  <div class="pedia-main">
+
+    <div class="px-grid" id="pIndex">
+      <button class="px-card" type="button" data-entry="patti" data-kw="パッチ Patti the Spook おばけ 主人公 1つ目 リボン バナナ ミーン モゥ 変身">
+        <span class="px-thumb"><img src="assets/creators/patti_profile.png" alt="" width="1120" height="680"></span>
+        <span class="px-b"><b>パッチ</b><span>おばけ｜二次創作OK</span></span>
+      </button>
+      <button class="px-card" type="button" data-entry="mayu" data-kw="マユちゃん Mayu ニンゲン ヒロイン 女の子">
+        <span class="px-thumb"><img src="assets/creators/mayu_profile.png" alt="" width="1120" height="730" loading="lazy"></span>
+        <span class="px-b"><b>マユちゃん</b><span>ニンゲン｜公式作品のみ</span></span>
+      </button>
+      <button class="px-card" type="button" data-entry="town" data-kw="No Life Town ノーライフタウン 街 世界観 お金 住人 文化 ルール">
+        <span class="px-thumb"><img src="assets/creators/nolifetown.jpg" alt="" width="1280" height="720" loading="lazy"></span>
+        <span class="px-b"><b>おばけの街「No Life Town」</b><span>世界観｜二次創作OK</span></span>
+      </button>
+      <button class="px-card" type="button" data-entry="book" data-kw="絵本 おばけのパッチ 原作 クラファン 池本将 note BASE">
+        <span class="px-thumb"><img src="assets/creators/ehon_cover.png" alt="" width="840" height="840" loading="lazy"></span>
+        <span class="px-b"><b>絵本「おばけのパッチ」</b><span>原作｜無料公開中</span></span>
+      </button>
+      <button class="px-card" type="button" data-entry="movie" data-kw="ストップモーション 動画 ムービー 実験">
+        <span class="px-thumb gl">&#127909;</span>
+        <span class="px-b"><b>公式ストップモーション</b><span>原作｜公式の試作</span></span>
+      </button>
+      <button class="px-card" type="button" data-entry="kit" data-kw="素材キット 公式PNG カラーガイド 準備中">
+        <span class="px-thumb gl">&#127912;</span>
+        <span class="px-b"><b>創作用素材キット</b><span>創作リソース｜準備中</span></span>
+      </button>
+      <button class="px-card" type="button" disabled data-kw="ミーン モゥ おばけ学校 同級生">
+        <span class="px-thumb gl">&#128123;</span>
+        <span class="px-b"><b>ミーン・モゥ</b><span>おばけ｜準備中</span></span>
+      </button>
+      <p class="no-hit" id="pNoHit" hidden>該当する項目が見つかりませんでした。</p>
+    </div>
+
+    <article class="entry" id="e-patti" hidden>
+      <button class="pback" type="button">&#8592; 一覧にもどる</button>
+      <div class="entry-head">
+        <div><div class="cat">FILE 01｜主人公・おばけ</div><h2>パッチ<span>Patti the Spook</span></h2></div>
         <span class="badge">二次創作OK</span>
       </div>
-      <div class="chara-body">
-        <figure><img src="assets/creators/patti_profile.png" alt="パッチの立ち絵（表情集）" width="1120" height="680"></figure>
-        <ul>
-          <li><b>すがた</b>：1つ目。目の下にクマ。ひまわり色のリボン</li>
-          <li><b>プロフィール</b>：おばけの子ども・男の子。身長約60cm、体重約3kg</li>
-          <li><b>性格</b>：普段は仏頂面。でも楽しいことが大好きで、ほんとうは表情豊か</li>
-          <li><b>リボン</b>：おじいちゃんからもらった宝物。取られると激怒する</li>
-          <li><b>能力</b>：いろんなものに変身できる。でも1つ目だけは残る。空も飛べる（長時間は無理）</li>
-          <li><b>苦手</b>：バナナ</li>
-          <li><b>ひみつ</b>：毎日「おどろかせかた」を勉強してる。でも実は——ニンゲンが大好き</li>
-          <li><b>友達</b>：おばけ学校の同級生、ミーンとモゥ</li>
-        </ul>
+      <figure><img src="assets/creators/patti_profile.png" alt="パッチの立ち絵（表情集）" width="1120" height="680"></figure>
+      <dl>
+        <dt>すがた</dt><dd>1つ目。目の下にクマ。ひまわり色のリボン</dd>
+        <dt>プロフィール</dt><dd>おばけの子ども・男の子。身長約60cm、体重約3kg</dd>
+        <dt>性格</dt><dd>普段は仏頂面。でも楽しいことが大好きで、ほんとうは表情豊か</dd>
+        <dt>リボン</dt><dd>おじいちゃんからもらった宝物。取られると激怒する</dd>
+        <dt>能力</dt><dd>いろんなものに変身できる。でも1つ目だけは残る。空も飛べる（長時間は無理）</dd>
+        <dt>苦手</dt><dd>バナナ</dd>
+        <dt>ひみつ</dt><dd>毎日「おどろかせかた」を勉強してる。でも実は——ニンゲンが大好き</dd>
+        <dt>友達</dt><dd>おばけ学校の同級生、ミーンとモゥ</dd>
+      </dl>
+    </article>
+
+    <article class="entry human" id="e-mayu" hidden>
+      <button class="pback" type="button">&#8592; 一覧にもどる</button>
+      <div class="entry-head">
+        <div><div class="cat">FILE 02｜ヒロイン・ニンゲン</div><h2>マユちゃん<span>Mayu</span></h2></div>
+        <span class="badge dark">公式作品のみ</span>
       </div>
-    </div>
-    <div class="chara human reveal">
-      <div class="chara-head">
-        <div><div class="file">FILE 02｜ヒロイン・ニンゲン</div><h3>マユちゃん <span>Mayu</span></h3></div>
-        <span class="badge">公式作品のみ</span>
-      </div>
-      <div class="chara-body">
-        <figure><img src="assets/creators/mayu_profile.png" alt="マユちゃんの立ち絵" width="1120" height="730" loading="lazy"></figure>
-        <ul>
-          <li><b>プロフィール</b>：おばけの街に迷い込んだ、ニンゲンの女の子</li>
-          <li><b>パッチとの関係</b>：マユちゃんと出会って、パッチは「ニンゲンと仲良くなりたい」と思うようになった</li>
-        </ul>
-        <span class="lock">🔒 二次創作の対象外です</span>
-        <p class="note">マユちゃんをはじめとする公式の人間キャラクターは、公式作品だけの存在です。かわりに、<b style="color:var(--ink)">あなたのオリジナル人間キャラクター</b>をおばけの世界に迷い込ませてあげてください。</p>
-      </div>
-    </div>
-    <div class="chara reveal" id="town">
-      <div class="chara-head">
-        <div><div class="file">FILE 03｜世界観</div><h3 style="font-size:20px">おばけの街「No Life Town」 <span>ノーライフタウン</span></h3></div>
+      <figure><img src="assets/creators/mayu_profile.png" alt="マユちゃんの立ち絵" width="1120" height="730" loading="lazy"></figure>
+      <dl>
+        <dt>プロフィール</dt><dd>おばけの街に迷い込んだ、ニンゲンの女の子</dd>
+        <dt>パッチとの関係</dt><dd>マユちゃんと出会って、パッチは「ニンゲンと仲良くなりたい」と思うようになった</dd>
+      </dl>
+      <span class="lock">&#128274; 二次創作の対象外です</span>
+      <p class="note">マユちゃんをはじめとする公式の人間キャラクターは、公式作品だけの存在です。かわりに、<b style="color:var(--ink)">あなたのオリジナル人間キャラクター</b>をおばけの世界に迷い込ませてあげてください。</p>
+    </article>
+
+    <article class="entry" id="e-town" hidden>
+      <button class="pback" type="button">&#8592; 一覧にもどる</button>
+      <div class="entry-head">
+        <div><div class="cat">FILE 03｜世界観</div><h2>おばけの街「No Life Town」<span>ノーライフタウン</span></h2></div>
         <span class="badge">二次創作OK</span>
       </div>
-      <div class="chara-body">
-        <figure><img src="assets/creators/nolifetown.jpg" alt="おばけの街「No Life Town」" width="1280" height="720" loading="lazy"></figure>
-        <ul>
-          <li><b>場所</b>：ニンゲンがすむ世界の、すぐとなり</li>
-          <li><b>住人</b>：おばけたちはニンゲンをビックリさせるのが大好き</li>
-          <li><b>文化</b>：ニンゲンの世界のものを、おばけ風に解釈して街に取り入れている</li>
-          <li><b>ルール</b>：この街には「お金」という概念がない。やりたいことをやって、だれかのためになるおばけが豊かになる</li>
-          <li><b>テーマ</b>：周りとは違う挑戦をすることで、夢はかなう</li>
-        </ul>
-        <p class="note">ミーン、モゥをはじめとする他のおばけたちの設定資料も、順番に追加していきます。</p>
+      <figure><img src="assets/creators/nolifetown.jpg" alt="おばけの街「No Life Town」" width="1280" height="720" loading="lazy"></figure>
+      <dl>
+        <dt>場所</dt><dd>ニンゲンがすむ世界の、すぐとなり</dd>
+        <dt>住人</dt><dd>おばけたちはニンゲンをビックリさせるのが大好き</dd>
+        <dt>文化</dt><dd>ニンゲンの世界のものを、おばけ風に解釈して街に取り入れている</dd>
+        <dt>ルール</dt><dd>この街には「お金」という概念がない。やりたいことをやって、だれかのためになるおばけが豊かになる</dd>
+        <dt>テーマ</dt><dd>周りとは違う挑戦をすることで、夢はかなう</dd>
+      </dl>
+      <p class="note">ミーン、モゥをはじめとする他のおばけたちの設定資料も、順番に追加していきます。</p>
+    </article>
+
+    <article class="entry" id="e-book" hidden>
+      <button class="pback" type="button">&#8592; 一覧にもどる</button>
+      <div class="entry-head">
+        <div><div class="cat">ORIGINAL STORY｜原作</div><h2>絵本「おばけのパッチ」<span>すべてはここから始まりました</span></h2></div>
+        <span class="badge">無料公開中</span>
       </div>
-    </div>
-  </div>
-  <div class="kit reveal">
-    <h3>🎨 創作用素材キット（準備中）</h3>
-    <p>公式PNG・カラーガイドなどの素材キットを準備中です。公開までしばらくお待ちください。</p>
-  </div>
-</section>
-
-<div class="stitch-div"><i></i><b></b><i></i></div>
-
-<section id="movie">
-  <div class="sec-head reveal">
-    <div class="eyebrow"><i></i><span>STOP MOTION</span><i></i></div>
-    <h2>公式も、実験中。</h2>
-    <p>公式が試作した、パッチのストップモーションムービーです。</p>
-  </div>
-  <figure class="movie reveal">
-    <video src="assets/creators/stopmotion.mp4" poster="assets/creators/stopmotion_poster.jpg" width="960" height="540" autoplay muted loop playsinline controls preload="metadata"></video>
-  </figure>
-</section>
-
-<div class="stitch-div"><i></i><b></b><i></i></div>
-
-<section id="book">
-  <div class="sec-head reveal">
-    <div class="eyebrow"><i></i><span>ORIGINAL STORY</span><i></i></div>
-    <h2>まずは原作を読んでみてください</h2>
-  </div>
-  <div class="book reveal">
-    <figure><img src="assets/creators/ehon_cover.png" alt="絵本「おばけのパッチ」表紙" width="840" height="840" loading="lazy"></figure>
-    <div class="book-info">
-      <h3>絵本「おばけのパッチ」</h3>
+      <figure><img src="assets/creators/ehon_cover.png" alt="絵本「おばけのパッチ」表紙" width="840" height="840" loading="lazy"></figure>
       <p>作者・池本将が、娘に「挑戦の大切さ」を伝えるためにボールペンで描いた絵本。すべてはここから始まりました。</p>
-      <div class="book-chips">
+      <div class="chips">
         <span>2022年10月24日 発売</span>
         <span>クラファン 840,833円・89人達成</span>
         <span>国内外の園・図書館へ寄贈</span>
@@ -410,13 +502,33 @@ section{padding:52px 0}
         <a class="btn solid" href="https://note.com/ikemotodir" target="_blank" rel="noopener">noteで無料で読む</a>
         <a class="btn line" href="https://studiopatti.base.shop" target="_blank" rel="noopener">絵本を購入する</a>
       </div>
-    </div>
+    </article>
+
+    <article class="entry" id="e-movie" hidden>
+      <button class="pback" type="button">&#8592; 一覧にもどる</button>
+      <div class="entry-head">
+        <div><div class="cat">STOP MOTION｜原作</div><h2>公式も、実験中。<span>公式が試作した、パッチのストップモーションムービー</span></h2></div>
+      </div>
+      <figure><video src="assets/creators/stopmotion.mp4" poster="assets/creators/stopmotion_poster.jpg" width="960" height="540" muted loop playsinline controls preload="none"></video></figure>
+      <p class="note">公式が試作した、パッチのストップモーションムービーです。</p>
+    </article>
+
+    <article class="entry" id="e-kit" hidden>
+      <button class="pback" type="button">&#8592; 一覧にもどる</button>
+      <div class="entry-head">
+        <div><div class="cat">CREATIVE KIT｜創作リソース</div><h2>創作用素材キット<span>準備中</span></h2></div>
+        <span class="badge dark">準備中</span>
+      </div>
+      <p>公式PNG・カラーガイドなどの素材キットを準備中です。公開までしばらくお待ちください。</p>
+    </article>
+
   </div>
-  <div class="midcta reveal" style="margin-top:30px">
-    <p>予習おわり。あとは創るだけ。</p>
-    <a class="btn solid" href="creators.html">クリエイターズトップへ</a>
-  </div>
-</section>
+</div>
+
+<div class="midcta reveal" style="margin:26px 0 10px">
+  <p>予習おわり。あとは創るだけ。</p>
+  <a class="btn solid" href="creators.html">クリエイターズトップへ</a>
+</div>
 
 </main>
 
@@ -480,6 +592,43 @@ section{padding:52px 0}
     });
   });
 })();
-</script>
+(function(){
+  var index=document.getElementById("pIndex"), nav=document.getElementById("pNav"), search=document.getElementById("pSearch");
+  if(!index||!nav) return;
+  var noHit=document.getElementById("pNoHit");
+  var entries={};
+  document.querySelectorAll("article.entry[id^='e-']").forEach(function(el){entries[el.id.slice(2)]=el;});
+  var cards=Array.prototype.slice.call(index.querySelectorAll(".px-card"));
+  var navBtns=Array.prototype.slice.call(nav.querySelectorAll(".pn-item"));
+  function showIndex(clearHash){
+    index.hidden=false; if(noHit) noHit.hidden=true;
+    Object.keys(entries).forEach(function(k){entries[k].hidden=true;});
+    navBtns.forEach(function(b){b.setAttribute("aria-current","false");});
+    if(clearHash && location.hash) history.replaceState(null,"",location.pathname);
+  }
+  function showEntry(key,push){
+    if(!entries[key]) return;
+    index.hidden=true; if(noHit) noHit.hidden=true;
+    Object.keys(entries).forEach(function(k){entries[k].hidden=(k!==key);});
+    navBtns.forEach(function(b){b.setAttribute("aria-current", b.getAttribute("data-entry")===key?"true":"false");});
+    if(push){ history.replaceState(null,"","#"+key); window.scrollTo({top:0,behavior:"smooth"}); }
+  }
+  cards.forEach(function(c){ if(!c.disabled) c.addEventListener("click",function(){showEntry(c.getAttribute("data-entry"),true);}); });
+  navBtns.forEach(function(b){ if(!b.disabled) b.addEventListener("click",function(){showEntry(b.getAttribute("data-entry"),true);}); });
+  document.querySelectorAll(".pback").forEach(function(b){ b.addEventListener("click",function(){showIndex(true);}); });
+  if(search) search.addEventListener("input",function(){
+    var q=search.value.trim().toLowerCase();
+    showIndex(false);
+    if(!q){ cards.forEach(function(c){c.hidden=false;}); return; }
+    var n=0;
+    cards.forEach(function(c){
+      var hay=((c.getAttribute("data-kw")||"")+" "+(c.textContent||"")).toLowerCase();
+      var hit=hay.indexOf(q)>=0; c.hidden=!hit; if(hit)n++;
+    });
+    if(noHit) noHit.hidden=(n>0);
+  });
+  var h=(location.hash||"").replace("#","");
+  if(h && entries[h]) showEntry(h,false);
+})();</script>
 </body>
 </html>
