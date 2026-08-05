@@ -662,3 +662,48 @@ world.html に「準備中」の表記が**2箇所残っている**（2026-08-05
 - **削除は破壊的操作なのでボス承認待ち**。承認されれば番人PC側でダッシュボードの
   「🗑 サイトから削除」相当の処理（ファイル削除＋GitHub削除＋キュー更新）を7件分行う
 - 作業PCは触らなくてよい（AUTOPILOT管理下のファイルのため）
+---
+
+## 18. ロゴの最終仕様（2026-08-05 確定）
+
+**フォント「あめちゃんポップまる」はWebフォント利用がライセンス禁止**のため、ボスが Canva から
+書き出した透過PNGを画像として使う。以下4枚が `assets/` にある。
+
+| ファイル | 用途 | 実寸 |
+|---|---|---|
+| `logo_ccl_1line_pink.png` | **PC(560px以上)のヘッダー** | 760x55 / 5KB |
+| `logo_ccl_1line_white.png` | ③のフッター（暗い背景） | 760x55 / 5KB |
+| `logo_ccl_pink.png` | **スマホ(560px未満)のヘッダー** | 440x299 / 8KB |
+| `logo_ccl_white.png` | 予備（暗い背景・縦組み） | 440x299 / 8KB |
+
+### なぜ2種類あるのか
+
+支給された1行版は **13.8:1** の横長。読める高さにすると幅が約300px必要で、
+スマホではナビと並べると入らない。逆に3行版は幅53pxとコンパクトだがPCでは小さすぎる。
+そこで `<picture>` で出し分けている（**表示されるほうだけがダウンロードされる**）:
+
+```html
+<picture>
+  <source media="(min-width:560px)" srcset="assets/logo_ccl_1line_pink.png">
+  <img src="assets/logo_ccl_pink.png" alt="CHARA CHARA LAB" width="440" height="299">
+</picture>
+```
+
+CSS側も同じ560pxで切り替える:
+```css
+.logo{display:flex;align-items:center;gap:9px;flex-shrink:0}   /* ③ */
+.logo img{height:36px;width:auto}                              /* スマホ=3行版 */
+@media(min-width:560px){.logo img{height:22px}}                /* PC=1行版 */
+```
+①②系は 40px / 24px（ヘッダーが少し大きいため）。
+
+### 触るときの注意
+
+- **`.logo{flex-shrink:0}` を消さないこと。** これが無いとナビに押されてロゴが横に潰れる
+  （375px幅で21%、320px幅で34%圧縮される。実測で確認済み）
+- 支給素材は**白文字**。白背景のヘッダーに置くぶんは ffmpeg の `colorchannelmixer` で
+  ブランドピンクに変換している（字形は一切変えていない）。ロゴを差し替えるときは同じ処理が必要:
+  `ffmpeg -i in.png -vf "colorchannelmixer=rr=0.839:gg=0.200:bb=0.424" out.png`
+- 支給PNGは**余白ゼロ**で文字が画像の縁に接している。これは切れているのではなく、
+  アンチエイリアスで端が透明に落ちているだけ（アルファチャンネルで確認済み）。
+  ピンク背景に重ねて拡大すると「切れている」ように錯覚するので注意
