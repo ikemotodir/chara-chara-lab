@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "キャラクターは「守る」と「開く」を両方設計する",
+      "date": "2026.08.05",
+      "pillar": "案件のリアル",
+      "file": "posts/20260805-4u83t.html",
+      "thumb": "assets/thumb_post_20260805-4u83t.jpg"
+    },
+    {
       "title": "ご当地キャラクターに学ぶ「愛される設計」",
       "date": "2026.08.04",
       "pillar": "設計理論",
