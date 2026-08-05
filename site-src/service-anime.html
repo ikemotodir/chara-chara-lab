@@ -19,12 +19,11 @@ a{color:inherit}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
 .logo img{height:40px;width:auto}
 @media(min-width:560px){.logo img{height:24px}}
-.logo small{font-size:11px;letter-spacing:.16em;color:#b9a9af;font-weight:500;white-space:nowrap}
 .site-head nav{display:flex;align-items:center;gap:22px}
-.site-head nav a{font-size:14px;font-weight:500;color:#4a4a4a;text-decoration:none}
+.site-head nav a{font-size:14px;font-weight:500;color:#4a4a4a;text-decoration:none;white-space:nowrap}
 .site-head nav .pill{font-size:13px;font-weight:700;color:#fff;background:var(--pink);padding:10px 20px;border-radius:999px}
 @media(max-width:960px){.site-head nav a:not(.pill){display:none}}
-@media(max-width:520px){.head-in{padding:14px 18px;gap:12px}.logo small{display:none}.logo img{height:40px}}
+@media(max-width:520px){.head-in{padding:14px 18px;gap:12px}.logo img{height:40px}}
 .dhero{position:relative;background:var(--pink);color:#fff;padding:76px 24px 64px;text-align:center;overflow:hidden}
 .dhero-in{position:relative;z-index:1;max-width:720px;margin:0 auto}
 .dhero .en{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--yellow);margin-bottom:14px}
@@ -37,11 +36,26 @@ a{color:inherit}
 .anim-in .sub{color:#fff;border-left-color:var(--yellow)}
 .anim-in .sub-lead{color:rgba(255,255,255,.85)}
 .vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.vid-card{display:block;background:#fff;border-radius:18px;overflow:hidden;text-decoration:none;box-shadow:0 12px 30px rgba(80,10,40,.22);transition:transform .15s,box-shadow .15s}
+.vid-card{display:block;width:100%;padding:0;border:0;background:#fff;border-radius:18px;overflow:hidden;text-align:left;font:inherit;cursor:pointer;box-shadow:0 12px 30px rgba(80,10,40,.22);transition:transform .15s,box-shadow .15s}
 .vid-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(80,10,40,.3)}
-.vid-embed{position:relative;width:100%;aspect-ratio:16/9;background:#000}
-.vid-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-.vid-body{padding:18px 20px}
+.vid-card:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.vid-thumb{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;background:linear-gradient(135deg,#3a2b33,#7a2448)}
+.vid-thumb.v2{background:linear-gradient(135deg,#2b2b2b,#b02458)}
+.vid-thumb.v3{background:linear-gradient(135deg,#43291d,#a8563a)}
+.vid-thumb.v4{background:linear-gradient(135deg,#22303a,#41707f)}
+.vid-play{display:flex;align-items:center;justify-content:center;width:66px;height:66px;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 6px 20px rgba(0,0,0,.32);transition:transform .15s}
+.vid-play::before{content:"";border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent var(--pink);margin-left:5px}
+.vid-card:hover .vid-play{transform:scale(1.12)}
+.vid-body{display:block;padding:18px 20px}
+.vlight{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.94);display:flex;align-items:center;justify-content:center;padding:24px}
+.vlight[hidden]{display:none}
+.vlight-box{width:auto;height:86vh;max-width:100%;max-height:86vh;aspect-ratio:16 / 9;background:#000;border-radius:10px;overflow:hidden}
+.vlight-frame,.vlight-frame iframe{display:block;width:100%;height:100%;border:0}
+.vlight-x{position:absolute;top:14px;right:18px;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.vlight-x:hover{background:rgba(255,255,255,.3)}
+@media(max-width:640px){.vlight{padding:12px}.vlight-x{top:6px;right:8px;width:40px;height:40px;font-size:22px}}
+.art-cover.img{overflow:hidden}
+.art-cover.img img{width:100%;height:100%;object-fit:cover;display:block}
 .vid-body b{display:block;font-family:'Zen Maru Gothic',sans-serif;font-size:17px;color:var(--ink);margin-bottom:6px}
 .vid-co{font-size:13.5px;font-weight:700;color:var(--pink)}
 .vidnote{color:rgba(255,255,255,.8);font-size:12.5px;margin-top:16px}
@@ -130,7 +144,7 @@ a{color:inherit}
 
 <header class="site-head">
   <div class="head-in">
-    <a class="logo" href="index.html"><picture><source media="(min-width:560px)" srcset="assets/logo_ccl_1line_pink.png"><img src="assets/logo_ccl_pink.png" alt="CHARA CHARA LAB" width="440" height="299"></picture><small>by STUDIO PATTI</small></a>
+    <a class="logo" href="index.html"><picture><source media="(min-width:560px)" srcset="assets/logo_ccl_1line_pink.png"><img src="assets/logo_ccl_pink.png" alt="CHARA CHARA LAB" width="440" height="299"></picture></a>
     <nav>
       <a href="index.html#about">ABOUT</a>
       <a href="index.html#articles">BLOG</a>
@@ -157,24 +171,24 @@ a{color:inherit}
     <h2 class="sub">制作事例</h2>
     <p class="sub-lead">私たちが創れるアニメーション。そのまま再生できます。</p>
     <div class="vid-grid">
-      <div class="vid-card">
-        <div class="vid-embed"><iframe src="https://player.vimeo.com/video/1166568421?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Genshin x Sushiro - Mizuki" loading="lazy"></iframe></div>
-        <div class="vid-body"><b>3DCG・VFX シネマティック</b><span class="vid-co">Amused Art Japan</span></div>
-      </div>
-      <div class="vid-card">
-        <div class="vid-embed"><iframe src="https://player.vimeo.com/video/1029119982?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="The Seven Deadly Sins - The Battle of Light and Darkness" loading="lazy"></iframe></div>
-        <div class="vid-body"><b>広告・ブランド映像</b><span class="vid-co">Amused Art Japan</span></div>
-      </div>
-      <div class="vid-card">
-        <div class="vid-embed"><iframe src="https://www.youtube-nocookie.com/embed/Y3UOLaso-MI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" title="アナログ・クラフト アニメーション" loading="lazy"></iframe></div>
-        <div class="vid-body"><b>アナログ・クラフト アニメーション</b><span class="vid-co">samillia</span></div>
-      </div>
-      <div class="vid-card">
-        <div class="vid-embed"><iframe src="https://player.vimeo.com/video/1084182206?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="A Film &quot;杜人 Moribito&quot; Animation" loading="lazy"></iframe></div>
-        <div class="vid-body"><b>映画劇中アニメーション</b><span class="vid-co">samillia</span></div>
-      </div>
+      <button class="vid-card" type="button" data-ratio="9 / 16" data-vid="https://player.vimeo.com/video/1166568421?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0">
+        <span class="vid-thumb v1"><span class="vid-play"></span></span>
+        <span class="vid-body"><b>3DCG・VFX シネマティック</b><span class="vid-co">Amused Art Japan</span></span>
+      </button>
+      <button class="vid-card" type="button" data-vid="https://player.vimeo.com/video/1029119982?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0">
+        <span class="vid-thumb v2"><span class="vid-play"></span></span>
+        <span class="vid-body"><b>広告・ブランド映像</b><span class="vid-co">Amused Art Japan</span></span>
+      </button>
+      <button class="vid-card" type="button" data-vid="https://www.youtube-nocookie.com/embed/Y3UOLaso-MI?autoplay=1&amp;rel=0">
+        <span class="vid-thumb v3"><span class="vid-play"></span></span>
+        <span class="vid-body"><b>アナログ・クラフト アニメーション</b><span class="vid-co">samillia</span></span>
+      </button>
+      <button class="vid-card" type="button" data-vid="https://player.vimeo.com/video/1084182206?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0">
+        <span class="vid-thumb v4"><span class="vid-play"></span></span>
+        <span class="vid-body"><b>映画劇中アニメーション</b><span class="vid-co">samillia</span></span>
+      </button>
     </div>
-    <p class="vidnote">※ 掲載は協力会社の制作実績です。</p>
+    <p class="vidnote">※ 掲載は協力会社の制作実績です。タップすると大画面で再生します。</p>
   </div>
 </section>
 
@@ -209,10 +223,10 @@ a{color:inherit}
     <div class="carousel">
       <button class="car-arrow prev" aria-label="前の記事">‹</button>
       <div class="car-track" id="artTrack">
-        <a class="art-card" href="posts/20260712-ai-3.html"><div class="art-cover log"><span>🧪</span><span class="art-badge">実験ログ</span></div><div class="art-body"><h4>動画生成AIを「自分のキャラ」で比べる前に、決めるべき3つのこと</h4><time>2026.07.12</time></div></a>
-        <a class="art-card" href="posts/20260712-61it3.html"><div class="art-cover theory"><span>📐</span><span class="art-badge">設計理論</span></div><div class="art-body"><h4>キャラクターは「描いて終わり」じゃない</h4><time>2026.07.12</time></div></a>
-        <a class="art-card" href="posts/20260712-2.html"><div class="art-cover theory"><span>📐</span><span class="art-badge">設計理論</span></div><div class="art-body"><h4>愛されるキャラにある「2つの欲」</h4><time>2026.07.12</time></div></a>
-        <a class="art-card" href="posts/20260712-6q5ll.html"><div class="art-cover theory"><span>📐</span><span class="art-badge">設計理論</span></div><div class="art-body"><h4>初音ミクと東方に学ぶ「キャラを開放すると、強くなる」という逆転</h4><time>2026.07.12</time></div></a>
+        <a class="art-card" href="posts/20260730-05p1o.html"><div class="art-cover log img"><img src="assets/thumb_post_20260730-05p1o.jpg" alt="" loading="lazy"><span class="art-badge">実験ログ</span></div><div class="art-body"><h4>【実験ログ】キャラクターの動かし方を検証してわかったこと</h4><time>2026.07.30</time></div></a>
+        <a class="art-card" href="posts/20260712-ai-3.html"><div class="art-cover log img"><img src="assets/thumb_post_20260712-ai-3.jpg" alt="" loading="lazy"><span class="art-badge">実験ログ</span></div><div class="art-body"><h4>動画生成AIを「自分のキャラ」で比べる前に、決めるべき3つのこと</h4><time>2026.07.12</time></div></a>
+        <a class="art-card" href="posts/20260805-4u83t.html"><div class="art-cover real img"><img src="assets/thumb_post_20260805-4u83t.jpg" alt="" loading="lazy"><span class="art-badge">案件のリアル</span></div><div class="art-body"><h4>キャラクターは「守る」と「開く」を両方設計する</h4><time>2026.08.05</time></div></a>
+        <a class="art-card" href="posts/20260804-m8xko.html"><div class="art-cover theory img"><img src="assets/thumb_post_20260804-m8xko.jpg" alt="" loading="lazy"><span class="art-badge">設計理論</span></div><div class="art-body"><h4>キャラクターの「欲しいもの」と「必要なもの」</h4><time>2026.08.04</time></div></a>
       </div>
       <button class="car-arrow next" aria-label="次の記事">›</button>
     </div>
@@ -303,15 +317,37 @@ a{color:inherit}
   var ALLOW=["描いて終わり","2つの欲","開放すると"];
   function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
   fetch("articles.json").then(function(r){return r.ok?r.json():Promise.reject();}).then(function(d){
-    var arts=(d.articles||[]).filter(function(a){return KW.test(a.title)||ALLOW.some(function(s){return a.title.indexOf(s)>=0;});});
-    if(!arts.length) return; // マッチ無しなら静的カードを維持
-    arts.sort(function(a,b){return (b.date||"").localeCompare(a.date||"");});
+    var all=(d.articles||[]).slice();
+    all.sort(function(a,b){return (b.date||"").localeCompare(a.date||"");});
+    var hit=all.filter(function(a){return KW.test(a.title)||ALLOW.some(function(s){return a.title.indexOf(s)>=0;});});
+    var arts=hit.concat(all.filter(function(a){return hit.indexOf(a)<0;})).slice(0,8);
+    if(!arts.length) return;
     track.innerHTML=arts.map(function(a){
       var cls=CLS[a.pillar]||"log";
-      return '<a class="art-card" href="'+a.file+'"><div class="art-cover '+cls+'"><span>'+(GLYPH[cls]||"🧪")+'</span><span class="art-badge">'+esc(a.pillar)+'</span></div><div class="art-body"><h4>'+esc(a.title)+'</h4><time>'+esc(a.date||"")+'</time></div></a>';
+      var cover=a.thumb?'<img src="'+esc(a.thumb)+'" alt="" loading="lazy">':'<span>'+(GLYPH[cls]||"🧪")+'</span>';
+      return '<a class="art-card" href="'+esc(a.file)+'"><div class="art-cover '+cls+(a.thumb?' img':'')+'">'+cover+'<span class="art-badge">'+esc(a.pillar)+'</span></div><div class="art-body"><h4>'+esc(a.title)+'</h4><time>'+esc(a.date||"")+'</time></div></a>';
     }).join("");
   }).catch(function(){});
 })();
+(function(){
+  var vl=document.getElementById("vlight"); if(!vl) return;
+  var vf=vl.querySelector(".vlight-frame"), vb=vl.querySelector(".vlight-box");
+  function closeV(){vf.innerHTML="";vl.hidden=true;document.body.style.overflow="";}
+  document.querySelectorAll(".vid-card").forEach(function(c){
+    c.addEventListener("click",function(){
+      vb.style.aspectRatio=c.getAttribute("data-ratio")||"16 / 9";
+      vf.innerHTML='<iframe src="'+c.getAttribute("data-vid")+'" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+      vl.hidden=false;document.body.style.overflow="hidden";
+    });
+  });
+  vl.addEventListener("click",function(e){if(e.target===vl)closeV();});
+  vl.querySelector(".vlight-x").addEventListener("click",closeV);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!vl.hidden)closeV();});
+})();
 </script>
+<div class="vlight" id="vlight" hidden>
+  <button class="vlight-x" type="button" aria-label="閉じる">&times;</button>
+  <div class="vlight-box"><div class="vlight-frame"></div></div>
+</div>
 </body>
 </html>
