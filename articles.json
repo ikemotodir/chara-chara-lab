@@ -15,53 +15,11 @@
       "thumb": "assets/thumb_post_20260804-7k4kw.jpg"
     },
     {
-      "title": "【実験ログ】AIにキャラクターの人格を作れるか",
-      "date": "2026.08.03",
-      "pillar": "実験ログ",
-      "file": "posts/20260803-ai.html",
-      "thumb": "assets/thumb_post_20260803-ai.jpg"
-    },
-    {
-      "title": "【週報を書く理由】数字より先にあるもの",
-      "date": "2026.08.02",
-      "pillar": "実験ログ",
-      "file": "posts/20260802-c8tb4.html",
-      "thumb": "assets/thumb_post_20260802-c8tb4.jpg"
-    },
-    {
       "title": "【配色設計の話】色は、性格より先に喋る",
       "date": "2026.08.03",
       "pillar": "設計理論",
       "file": "posts/20260803-4ukun.html",
       "thumb": "assets/thumb_post_20260803-4ukun.jpg"
-    },
-    {
-      "title": "キャラクターの口調と一人称は、「性格」じゃなく「関係性」で決まる",
-      "date": "2026.08.01",
-      "pillar": "設計理論",
-      "file": "posts/20260801-b428g.html",
-      "thumb": "assets/thumb_post_20260801-b428g.jpg"
-    },
-    {
-      "title": "【行政案件のリアル】決裁者が一人じゃない現場で学んだこと",
-      "date": "2026.08.01",
-      "pillar": "案件のリアル",
-      "file": "posts/20260801-uphpm.html",
-      "thumb": "assets/thumb_post_20260801-uphpm.jpg"
-    },
-    {
-      "title": "キャラクターデザインは、黒く塗りつぶして考える",
-      "date": "2026.07.31",
-      "pillar": "設計理論",
-      "file": "posts/20260731-yrw8t.html",
-      "thumb": "assets/thumb_post_20260731-yrw8t.jpg"
-    },
-    {
-      "title": "発信の数字は、褒めてくれない",
-      "date": "2026.07.31",
-      "pillar": "実験ログ",
-      "file": "posts/20260731-mnihu.html",
-      "thumb": "assets/thumb_post_20260731-mnihu.jpg"
     },
     {
       "title": "キャラクターの「欲しいもの」と「必要なもの」",
@@ -181,12 +139,6 @@
       "pillar": "設計理論",
       "file": "posts/20260726-4v6rz.html",
       "thumb": "assets/thumb_post_20260726-4v6rz.jpg"
-    },
-    {
-      "title": "「キャラクター配色設計」～色は「なんとなく」で決めていいものじゃない。",
-      "date": "2026.07.26",
-      "pillar": "",
-      "file": "posts/20260726-2kyi3.html"
     },
     {
       "title": "キャラクターの口調と一人称の決め方",
