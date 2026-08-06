@@ -769,9 +769,26 @@ CSS側も同じ560pxで切り替える:
 
 番人PCで管理者権限のコマンドプロンプト、または番人PC側のClaudeから実行：
 
+番人PCは**夜に電源を落とし、朝に入れる**運用。`schtasks /sc hourly` だけだと、
+電源OFF中に来た実行予定はWindowsの既定でスキップされ、朝つけても次の正時まで走らない。
+**ログオン時トリガー＋毎時トリガー＋StartWhenAvailable** の3点セットで登録すること。
+PowerShellを管理者権限で開いて以下を実行：
+
+```powershell
+$bat = "C:\Claude\apps\chara-autopilot\pull_templates.bat"   # 実在を確認してから
+$action = New-ScheduledTaskAction -Execute $bat
+$tLogon = New-ScheduledTaskTrigger -AtLogOn
+$tLogon.Delay = "PT3M"          # AUTOPILOT起動と competing しないよう3分ずらす
+$tHourly = New-ScheduledTaskTrigger -Once -At (Get-Date).Date.AddMinutes(1) `
+           -RepetitionInterval (New-TimeSpan -Hours 1)
+$set = New-ScheduledTaskSettingsSet -StartWhenAvailable -ExecutionTimeLimit (New-TimeSpan -Minutes 30)
+Register-ScheduledTask -TaskName "CCL_PullTemplates" -Action $action `
+  -Trigger $tLogon,$tHourly -Settings $set -Force
 ```
-schtasks /create /tn "CCL_PullTemplates" /tr "C:\Claude\apps\chara-autopilot\pull_templates.bat" /sc hourly /f
-```
+
+- `-AtLogOn` … 朝ボスがログインした3分後に1回走る
+- `-RepetitionInterval 1h` … 日中は1時間ごと
+- `-StartWhenAvailable` … 電源OFFで飛ばされた分を、起動後に取り返して実行する
 
 これだけで、**1時間ごとに自動で「GitHubのsite-src取得 → 検査 → template反映 → 全ページ再生成 → GitHub同期」が走る。**
 以降、作業PCが push すれば最大1時間で本番に反映される。**ボスの操作はゼロ。**
