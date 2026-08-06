@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "【実験ログ】キャラクターの動かし方を検証してわかったこと",
+      "date": "2026.08.06",
+      "pillar": "実験ログ",
+      "file": "posts/20260806-jnsp4.html",
+      "thumb": "assets/thumb_post_20260806-jnsp4.jpg"
+    },
+    {
       "title": "見積もりは「絵」ではなく「工程」に値段をつける",
       "date": "2026.08.06",
       "pillar": "案件のリアル",
