@@ -166,7 +166,7 @@ service-anime.html  posts/*.html       assets/直下のファイル
 | `.company` | — | 運営会社概要 |
 | `footer .copyright` | — | © |
 
-モーダル：`m-about` / `m-svc1`〜`m-svc4`（`data-modal="m-xxx"` を持つボタンで開く。`m-svc2` から service-anime.html へリンク）
+モーダル：`m-about` / `m-svc1`〜`m-svc4`（`data-modal="m-xxx"` を持つボタンで開く。`m-svc2` は準備中バッジ `.modal-soon` でリンクなし）
 
 ヘッダーナビ：ABOUT / BLOG / ATELIER / PATTI's WORLD / SERVICE / **CREATORS** / 相談する（pill）
 ※ ナビは `@media(max-width:960px)` で非表示になる（`nav a:not(.pill){display:none}`）。項目を増やすとPCで溢れるので注意
@@ -379,7 +379,7 @@ world.html に「準備中」の表記が**2箇所残っている**（2026-08-05
 
 作業PCのクローンが7/30で止まっている場合、以下は**まだ見ていない変更**。
 
-### ✅ ゲート開放（7/31完了）
+### ✅ ゲート開放（7/31完了）※2026-08-06にアニメ制作ページのみ再クローズ（下記§22）
 トップページの「準備中」バンドを廃止し、クリエイターズプログラムを正式公開。**ステルス状態は終了し、トップから正式導線が通っている。**
 - バッジ `COMING SOON` → `NOW OPEN`／見出し「パッチクリエイターズプログラム、はじまりました。」／リンク「くわしく見る →」→ `creators.html`
 - ヘッダーナビに **CREATORS** を追加（nav gap 30→22px、ナビ非表示のブレイクポイント 860→960px に分離）
@@ -890,3 +890,28 @@ site-src取り込み処理を組み込む（§16の案）。ただし**上記の
 
 番人PC側の §18（作業ログ）と作業PC側の §18（ロゴの最終仕様）が衝突していたため、
 番人PC側を **§22** に変更し、末尾へ移動した。`§18-1〜18-5` への参照も `§22-1〜22-5` に直してある。
+
+---
+
+## 22. アニメ制作ページの再クローズ（2026-08-06）
+
+ボスの指示で `service-anime.html` への導線を**全て閉じた**。ページ自体は残っており、
+URL直打ちなら閲覧できる（公開再開が決まったらリンクを戻すだけ）。
+
+削除した導線は計7箇所:
+- `site-src/index_template.html` … フッターナビ / SERVICE 02モーダル（`.modal-soon` の準備中バッジに戻した）
+- `creators.html` `guideline.html` `world.html` … フッターナビ
+- `site-src/archive_template.html` `site-src/blog_template.html` … フッターナビ
+- `site-src/service-anime.html` … 自ページのフッターナビ（自己リンク）
+
+**再開するときは上記7箇所に戻すこと。** 1箇所でも漏れるとナビの並びが不揃いになる。
+
+### 同時に直したヘッダーの折返し（実測ベース）
+
+- ①②系: `nav` を `flex-wrap:nowrap` にした結果、**961〜978pxで横スクロールが出る**ことが実測で判明。
+  ナビ非表示の閾値を `960px` → **`1080px`** に引き上げて解消。
+  （1行に必要な実寸は1010.17px。head-inのpadding込みで1075px以上ないと収まらない）
+- ③系: `creators/guideline/world` のヘッダーは375pxで `#パッチワーク` が2行目に落ちていた。
+  `.head-nav` を `nowrap` にし、1行ロゴへの切替を **560px → 800px** に上げて全幅で1行に収めた。
+  （800px未満は3行ロゴ=幅53pxなので、375pxでも 53+10+234=297px < 343px で収まる）
+- `.modal-soon` の文字色が `--muted` でコントラスト2.39:1（WCAG AA不足）だったため `--sub` に変更（6.81:1）
