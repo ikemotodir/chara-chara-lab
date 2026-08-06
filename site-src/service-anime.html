@@ -39,11 +39,14 @@ a{color:inherit}
 .vid-card{display:block;width:100%;padding:0;border:0;background:#fff;border-radius:18px;overflow:hidden;text-align:left;font:inherit;cursor:pointer;box-shadow:0 12px 30px rgba(80,10,40,.22);transition:transform .15s,box-shadow .15s}
 .vid-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(80,10,40,.3)}
 .vid-card:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
-.vid-thumb{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;background:linear-gradient(135deg,#3a2b33,#7a2448)}
-.vid-thumb.v2{background:linear-gradient(135deg,#2b2b2b,#b02458)}
-.vid-thumb.v3{background:linear-gradient(135deg,#43291d,#a8563a)}
-.vid-thumb.v4{background:linear-gradient(135deg,#22303a,#41707f)}
-.vid-play{display:flex;align-items:center;justify-content:center;width:66px;height:66px;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 6px 20px rgba(0,0,0,.32);transition:transform .15s}
+.vid-thumb{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;background:#2b2b2b center/cover no-repeat}
+.vid-thumb::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.18);transition:background .15s}
+.vid-card:hover .vid-thumb::after{background:rgba(0,0,0,.06)}
+.vid-thumb.v1{background-image:url('assets/anim_thumb_3dcg.jpg')}
+.vid-thumb.v2{background-image:url('assets/anim_thumb_ad.jpg')}
+.vid-thumb.v3{background-image:url('assets/anim_thumb_craft.jpg')}
+.vid-thumb.v4{background-image:url('assets/anim_thumb_film.jpg')}
+.vid-play{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:66px;height:66px;border-radius:50%;background:rgba(255,255,255,.94);box-shadow:0 6px 20px rgba(0,0,0,.32);transition:transform .15s}
 .vid-play::before{content:"";border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent var(--pink);margin-left:5px}
 .vid-card:hover .vid-play{transform:scale(1.12)}
 .vid-body{display:block;padding:18px 20px}
