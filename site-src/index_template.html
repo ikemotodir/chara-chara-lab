@@ -28,9 +28,9 @@ a{color:inherit;text-decoration:none}
 .logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
 .logo img{height:40px;width:auto}
 @media(min-width:560px){.logo img{height:24px}}
-nav{display:flex;align-items:center;gap:22px}
+nav{display:flex;align-items:center;gap:22px;flex-wrap:nowrap}
 nav a{font-size:14px;font-weight:500;color:#4a4a4a;white-space:nowrap}
-nav .pill{font-size:13px;font-weight:700;color:#fff;background:var(--pink);padding:10px 20px;border-radius:999px}
+nav .pill{font-size:13px;font-weight:700;color:#fff;background:var(--pink);padding:10px 20px;border-radius:999px;white-space:nowrap;flex:none}
 
 /* hero */
 .hero{position:relative;background:var(--pink);color:#fff;overflow:hidden}
@@ -497,7 +497,6 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
   <div class="foot-nav"><div>
     <a href="index.html">トップ</a>
     <a href="articles.html">記事一覧</a>
-    <a href="service-anime.html">アニメーション制作</a>
     <a href="creators.html">クリエイターズ</a>
     <a href="guideline.html">ガイドライン</a>
     <a href="world.html">設定資料</a>
@@ -540,7 +539,7 @@ h1{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:clamp(44px
       <p class="en">SERVICE 02</p>
       <h3>アニメーション制作</h3>
       <p>キャラクターに、動きと呼吸を。Live2D・3DCG・モーショングラフィックス・VFX・手づくりのコマ撮りまで、信頼できる協力スタジオと連携し、用途と予算に合った「最適な動かし方」をご提案します。</p>
-      <a class="modal-cta" href="service-anime.html">詳細ページを見る →</a>
+      <span class="modal-soon">⏳ 詳細ページ準備中</span>
     </div>
   </div>
 </div>
