@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "PIXARから学ぶ「AI」とキャラクター",
+      "date": "2026.08.10",
+      "pillar": "実験ログ",
+      "file": "posts/20260810-pixar-ai.html",
+      "thumb": "assets/thumb_post_20260810-pixar-ai.jpg"
+    },
+    {
       "title": "【実験ログ】キャラクターの動かし方を検証してわかったこと",
       "date": "2026.08.06",
       "pillar": "実験ログ",
